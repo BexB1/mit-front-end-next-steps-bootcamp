@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Getting Set Up · GitBook</title>
+        <title>Building the foundations : HTML · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="front_end.html" />
     
+    <link rel="prev" href="project_setup.html" />
     
 
     </head>
@@ -114,7 +114,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="getting_set_up.html">
+        <li class="chapter " data-level="1.2.1" data-path="getting_set_up.html">
             
                 <a href="getting_set_up.html">
             
@@ -153,7 +153,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="html1.html">
+        <li class="chapter active" data-level="1.2.4" data-path="html1.html">
             
                 <a href="html1.html">
             
@@ -472,7 +472,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Getting Set Up</a>
+        <a href=".." >Building the foundations : HTML</a>
     </h1>
 </div>
 
@@ -487,31 +487,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="getting-set-up">Getting Set Up</h1>
-<h3 id="join-the-slack-channel">Join the Slack channel</h3>
-<p>We have our own Slack channel for the Bootcamp, where we can chat about code, our projects, and work through problems together. If you have any questions or confusions during the week, use the channel to chat about it with your fellow students. Your mentors will also be on the channel to help out.</p>
-<blockquote>
-<p><a href="">Join the Slack channel</a></p>
-</blockquote>
-<h1 id="1-install-git">1. Install Git</h1>
-<blockquote>
-<p><a href="https://git-scm.com/download/" target="_blank">https://git-scm.com/download/</a></p>
-</blockquote>
-<p>Git is an open-source versional control system. It makes working on projects, both solo but especially as part of a group, much more efficient. Head to the link above and install the right version of Git for your operating system.</p>
-<h2 id="terminal">Terminal</h2>
-<p>If you&apos;re on a Mac, you&apos;ll already have a program called <code>Terminal</code> installed. Press <code>CMD + Space</code> and type &apos;terminal&apos; in the bar to find it. Alternatively you can find it in you Applications folder. Once you&apos;ve found it, drag it onto your dock so it&apos;s at hand. Those using Linux systems will also already have the Terminal program.</p>
-<p>Windows users will get a terminal alongside their Git download. When you need to open <code>Terminal</code> during the Bootcamp, you&apos;ll need to open <code>Git Bash</code>. Drag the program <code>Bash</code> onto your toolbar, or make a shortcut on your Desktop.</p>
-<h1 id="2-make-a-github-account">2. Make a GitHub account</h1>
-<p>Next, we need to make an account of GitHub so that the code we write can be stored on the internet.</p>
-<blockquote>
-<p><a href="https://github.com/" target="_blank">Sign up for GitHub</a></p>
-</blockquote>
-<h1 id="3-install-an-ide">3. Install an IDE</h1>
-<p>&apos;IDE&apos; stands for &apos;Integrated Development Environment&apos;. An IDE is basically a program designed specifically for developers to use in the writing of code. For this bootcamp, we&apos;ll be using Sublime Text 3. Sublime is a very widely-use IDE with excellent community support. If you&apos;ve used Microsoft Word before, you shouldn&apos;t find it difficult to use. But as we go along, you&apos;ll see that Sublime offers a lot of useful features for coders.</p>
-<blockquote>
-<p><a href="https://www.sublimetext.com/3" target="_blank">Install Sublime Text 3</a></p>
-</blockquote>
-<h1 id="4-install-google-chrome">4. Install Google Chrome</h1>
+                                <h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#one">Making the &apos;skeleton&apos; of our project</a></li>
+<li><a href="#two">Good HTML layout</a></li>
+<li><a href="#three">All about linking</a></li>
+<li><a href="#four">Using comments</a></li>
+<li><a href="#five">Some common HTML elements</a></li>
+<li><a href="#six">Keeping things DRY with partials</a></li>
+</ul>
+<hr>
+<h1 id="lets-get-coding">Let&apos;s get coding</h1>
+<p>You&apos;ve got all of your developer tools set up, and you&apos;re ready to start coding. As a front end developer, typically the first place you&apos;ll begin is with the &apos;bare bones&apos; of your project; the HTML page structure.</p>
+<h1 id="1-making-the-skeleton-of-our-project"><span id="one">1. Making the &apos;skeleton&apos; of our project</span></h1>
+<p>Open <code>terminal</code> and navigate to where you&apos;d like your project to be stored. The Desktop is a good place to keep it. </p>
+<p>type <code>touch index.html</code> in the root directory of your project. Remember; if you&apos;re not sure where you are currently in the terminal, you can type <code>pwd</code> for the address.</p>
+<h1 id="2-good-html-layout"><span id="two">2. Good HTML layout</span></h1>
+<p>HTML files are typically laid out as such:</p>
+<pre><code class="lang-html">  <span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+      // content in the head goes here. This usually involves things like CSS / JavaScript links,
+      // the title of the page, etc.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+      // Body content goes here.
+    <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<h1 id="3-all-about-linking"><span id="three">3. All about linking</span></h1>
+<h1 id="4-using-comments"><span id="four">4. Using comments</span></h1>
+<h1 id="5-some-common-html-elements"><span id="five">5. Some common HTML elements</span></h1>
+<ul>
+<li>&apos;semantic&apos; elements; eg, headers.</li>
+</ul>
+<h1 id="6-keeping-things-dry-with-partials"><span id="six">6. Keeping things DRY with partials</span></h1>
 
                                 
                                 </section>
@@ -539,10 +549,10 @@
 
             
                 
-                
-                <a href="front_end.html" class="navigation navigation-next navigation-unique" aria-label="Next page: What is the Front End?">
-                    <i class="fa fa-angle-right"></i>
+                <a href="project_setup.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Project Set Up : Terminal and Git">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -551,7 +561,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Getting Set Up","level":"1.2.1","depth":2,"next":{"title":"What is the Front End?","level":"1.2.2","depth":2,"path":"Day_1/front_end.md","ref":"./Day_1/front_end.md","articles":[]},"previous":{"title":"Day 1","level":"1.2","depth":1,"ref":"","articles":[{"title":"Getting Set Up","level":"1.2.1","depth":2,"path":"Day_1/getting_set_up.md","ref":"./Day_1/getting_set_up.md","articles":[]},{"title":"What is the Front End?","level":"1.2.2","depth":2,"path":"Day_1/front_end.md","ref":"./Day_1/front_end.md","articles":[]},{"title":"Project Set Up : Terminal and Git","level":"1.2.3","depth":2,"path":"Day_1/project_setup.md","ref":"./Day_1/project_setup.md","articles":[]},{"title":"Building the foundations : HTML","level":"1.2.4","depth":2,"path":"Day_1/html1.md","ref":"./Day_1/html1.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/getting_set_up.md","mtime":"2017-07-10T12:22:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-10T15:58:36.651Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Building the foundations : HTML","level":"1.2.4","depth":2,"next":{"title":"Day 2","level":"1.3","depth":1,"ref":"","articles":[{"title":"Getting Stylish with CSS","level":"1.3.1","depth":2,"path":"Day_2/css1.md","ref":"Day_2/css1.md","articles":[]},{"title":"Responsive Design","level":"1.3.2","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]}]},"previous":{"title":"Project Set Up : Terminal and Git","level":"1.2.3","depth":2,"path":"Day_1/project_setup.md","ref":"./Day_1/project_setup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/html1.md","mtime":"2017-07-10T15:49:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-10T15:58:36.651Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
