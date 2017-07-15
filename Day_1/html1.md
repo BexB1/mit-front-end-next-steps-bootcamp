@@ -38,10 +38,18 @@ HTML files are typically laid out as such:
 
 # <span id="three">3. All about linking</span>
 
+- Mailto
+
 # <span id="four">4. Using comments</span>
+
+Comments are a great way to kind of 'signpost' your code. Think of them as sticky notes you might put on a book.
 
 # <span id="five">5. Some common HTML elements</span>
 
 - 'semantic' elements; eg, headers.
 
 # <span id="six">6. Keeping things DRY with partials</span>
+
+Typically a header will be displayed constantly across all pages on a single site. Trouble is, if we want that to be the case here, we'll have to copy and paste the header code into all pages of our site. Not only is that kind of a pain, it's also bad coding practice.
+
+[The 'DRY' Principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) states that we should do something to reduce unnecessary code repetition. Ideally what we'd like to do here is write the code for the header once and have it generate on every page. We're going to do that with something known as a `template engine`.

@@ -6,8 +6,8 @@
 * [Day 2]()
   * [Getting Stylish with CSS](/Day_2/css1.md)
   * [Responsive Design](./Day_2/responsive.md)
-* [Day 3]()
   * [CSS Framework : Bootstrap]()
+* [Day 3]()
   * [New CSS features : Flexbox and Grid]()
   * [All about Accessibility]()
   * [Animation : Add Some Va Va Voom]()
@@ -15,9 +15,10 @@
   * [Intro to JavaScript](./Day_4/intro_to_js.md)
   * [Diving into data types]()
   * [Fun with functions]()
+  * [Working with the DOM : Modals]()
 * [Day 5]()
-  * [It's Time to Deploy!](./Day_5/deploy.md)
   * [Topic]()
+  * [It's Time to Deploy!](./Day_5/deploy.md)
 
 
 * [Resources]()

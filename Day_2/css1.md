@@ -8,6 +8,8 @@
 - <a href="#">Fancy fonts</a>
 - <a href="#">Working with colour</a>
 - <a href="#">CSS hacks : using Chrome's Developer Tools</a>
+- <a href="#">CSS standards</a>
 - <a href="#">Links and resources</a>
 
 ---
+
