@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Building the foundations : HTML · GitBook</title>
+        <title>Building foundations : HTML & CSS · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -145,7 +145,7 @@
                 <a href="project_setup.html">
             
                     
-                    Project Set Up : Terminal and Git
+                    Project Creation : Terminal and Git
             
                 </a>
             
@@ -158,7 +158,7 @@
                 <a href="html1.html">
             
                     
-                    Building the foundations : HTML
+                    Building foundations : HTML & CSS
             
                 </a>
             
@@ -211,6 +211,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.3" data-path="../Day_2/bootstrap.html">
+            
+                <a href="../Day_2/bootstrap.html">
+            
+                    
+                    CSS Framework : Bootstrap
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -235,7 +248,7 @@
                 <span>
             
                     
-                    CSS Framework : Bootstrap
+                    New CSS features : Flexbox and Grid
             
                 </span>
             
@@ -248,19 +261,6 @@
                 <span>
             
                     
-                    New CSS features : Flexbox and Grid
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" >
-            
-                <span>
-            
-                    
                     All about Accessibility
             
                 </span>
@@ -269,7 +269,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" >
+        <li class="chapter " data-level="1.4.3" >
             
                 <span>
             
@@ -340,6 +340,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    Working with the DOM : Modals
+            
+                </span>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -377,7 +390,7 @@
                 <span>
             
                     
-                    Topic
+                    Where to go from here
             
                 </span>
             
@@ -472,7 +485,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Building the foundations : HTML</a>
+        <a href=".." >Building foundations : HTML & CSS</a>
     </h1>
 </div>
 
@@ -489,20 +502,17 @@
                                 
                                 <h1 id="contents">Contents</h1>
 <ul>
-<li><a href="#one">Making the &apos;skeleton&apos; of our project</a></li>
-<li><a href="#two">Good HTML layout</a></li>
-<li><a href="#three">All about linking</a></li>
-<li><a href="#four">Using comments</a></li>
-<li><a href="#five">Some common HTML elements</a></li>
-<li><a href="#six">Keeping things DRY with partials</a></li>
+<li><a href="#one">HTML layout</a></li>
+<li><a href="#two">Hello, world!</a></li>
+<li><a href="#three">Using comments</a></li>
+<li><a href="#four">Fleshing out our page</a></li>
+<li><a href="#five">Keeping things DRY with partials</a></li>
 </ul>
 <hr>
 <h1 id="lets-get-coding">Let&apos;s get coding</h1>
 <p>You&apos;ve got all of your developer tools set up, and you&apos;re ready to start coding. As a front end developer, typically the first place you&apos;ll begin is with the &apos;bare bones&apos; of your project; the HTML page structure.</p>
-<h1 id="1-making-the-skeleton-of-our-project"><span id="one">1. Making the &apos;skeleton&apos; of our project</span></h1>
-<p>Open <code>terminal</code> and navigate to where you&apos;d like your project to be stored. The Desktop is a good place to keep it. </p>
-<p>type <code>touch index.html</code> in the root directory of your project. Remember; if you&apos;re not sure where you are currently in the terminal, you can type <code>pwd</code> for the address.</p>
-<h1 id="2-good-html-layout"><span id="two">2. Good HTML layout</span></h1>
+<p>In the Terminal, while within the folder containing your <code>index.html</code>, type <code>subl .</code> to open your project with Sublime Text.</p>
+<h1 id="1-html-layout"><span id="one">1. HTML layout</span></h1>
 <p>HTML files are typically laid out as such:</p>
 <pre><code class="lang-html">  <span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
@@ -515,13 +525,76 @@
     <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
 </code></pre>
-<h1 id="3-all-about-linking"><span id="three">3. All about linking</span></h1>
-<h1 id="4-using-comments"><span id="four">4. Using comments</span></h1>
-<h1 id="5-some-common-html-elements"><span id="five">5. Some common HTML elements</span></h1>
+<p>Let&apos;s go through these one-by-one.</p>
 <ul>
-<li>&apos;semantic&apos; elements; eg, headers.</li>
+<li><code>&lt;!DOCTYPE html&gt;</code> tells the browser what type of code to expect.</li>
+<li>The <code>&lt;html&gt;&lt;/html&gt;</code> tags enclose all of the HTML on our page, and tell the browser where to start and stop reading the code.</li>
+<li>The <code>&lt;head&gt;</code> tags contain all of the HTML code which doesn&apos;t make up the body of the web page. Commonly found within the head tags are things like stylesheet links and &apos;metadata&apos;, such as the title of the page which shows up n the browser tab.</li>
+<li>The<code>&lt;body&gt;</code> tags contain the meat of the page; here&apos;s where we&apos;ll declare all of the components making up the visual structure of the page.</li>
 </ul>
-<h1 id="6-keeping-things-dry-with-partials"><span id="six">6. Keeping things DRY with partials</span></h1>
+<h1 id="2-hello-world"><span id="two">2. Hello, world!</span></h1>
+<p>Now to get something showing up in our browser. Right-click <code>index.html</code> in the Sublime sidebar and select &apos;Open in Browser &gt; Chrome&apos;. It should just be a blank screen.</p>
+<p>If we enter the following...</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Hello, world!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+<p>We should see this:</p>
+<p><img src="../img/day_1/hello-world.png" alt="Our first HTML element"></p>
+<p>So we know that our HTML is showing up on our page just fine.</p>
+<p>Let&apos;s put our first image in. Remove the previous <code>&lt;h1&gt;</code> tag and enter between the body tags:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./img/lake.jpeg&quot;</span>&gt;</span>
+</code></pre>
+<p>Note that the <code>&lt;img&gt;</code> tag is <em>self-closing</em>-- you don&apos;t need an accompanying <code>&lt;/img&gt;</code> tag to tell the browser where the image ends, unlike in the heading tag we just used.</p>
+<p>If you refresh <code>index.html</code> in your browser, you should see the image showing up. But it&apos;s pretty huge, so we&apos;ll need to resize it. We could do something like the following:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./img/lake.jpeg&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">&quot;500px&quot;</span>&gt;</span>
+</code></pre>
+<p>This at least makes the image fully visible, but it&apos;s not a great solution; ideally, we want the image to take up the whole screen. The trouble is, we don&apos;t know how big the user&apos;s screen is. For this, we&apos;ll need some CSS. We don&apos;t have any stylesheets made just yet, so we&apos;ll use some <code>inline CSS</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./img/lake.jpeg&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;max-width:100%;&quot;</span>&gt;</span>
+</code></pre>
+<p>Inline CSS is when you attach the CSS styling directly to the tag of the HTML element it affects. Shortly we&apos;ll make some style sheets and move all of our styling into there, but for now this is a temporary solution to our image sizing problem.</p>
+<h1 id="4-using-comments"><span id="three">4. Using comments</span></h1>
+<p>Comments are a great way to kind of &apos;signpost&apos; your code. Think of them as sticky notes you might put on a book. When you &apos;comment out&apos; some code, it won&apos;t affect the resulting browser code at all. So you can use code either to make code &apos;latent&apos;, or for your own notation purposes.</p>
+<p>To remind ourselves to remove the inline CSS when we made our stylesheets, let&apos;s make a comment about our <code>img</code> tag now.</p>
+<p><img src="../img/day_1/html-comment.png" alt="Commenting in HTML"></p>
+<h1 id="5-fleshing-out-our-page"><span id="four">5. Fleshing out our page</span></h1>
+<p>It&apos;s time to get some text into our app.</p>
+<p>Add a <code>div</code> element beneath our image. <code>div</code> stands for &apos;division&apos;, but it&apos;s better to think of a div as a box. It&apos;s a container for whatever other HTML elements you want to put in that box, which you can then manipulate with CSS to get it to behave however you want. Within the div, open some paragraph tags; <code>&lt;p</code>&gt;, like so:</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!doctype html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- NOTE : remove the inline CSS when stylesheets are made! --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./img/lake.jpeg&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;max-width:100%;&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque amet provident eligendi ut id, ratione quasi tenetur ipsum repellendus aperiam voluptatum eaque reiciendis, eos quae tempora temporibus magni hic?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>      
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque amet provident eligendi ut id, ratione quasi tenetur ipsum repellendus aperiam voluptatum eaque reiciendis, eos quae tempora temporibus magni hic?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p><strong>Note:</strong> you can type <code>lorem</code> and then press tab to instantly get some filler text, but if you&apos;d like some alternative ipsum text you can check out <a href="http://idsgn.dropmark.com/107" target="_blank">Choose Your Ipsum</a>. Two of my favourites are <a href="https://hipsum.co/" target="_blank">Hipster Ipsum</a> and <a href="http://www.catipsum.com/" target="_blank">Cat Ipsum</a>.</p>
+<blockquote>
+<p>If you&apos;re using Sublime Text and you want a bit more text, highlight the lines you want to duplicate (the <code>&lt;p&gt;</code> tags and the text within) and press <code>CMD + Shift + D</code>.</p>
+</blockquote>
+<p><img src="../img/day_1/div-text.png" alt=""></p>
+<h3 id="making-a-header-and-footer">Making a header and footer</h3>
+<h3 id="making-and-linking-to-additional-pages">Making and linking to additional pages</h3>
+<h1 id="6-keeping-things-dry-with-partials"><span id="five">6. Keeping things DRY with partials</span></h1>
+<p>Typically a header will be displayed constantly across all pages on a single site. Trouble is, if we want that to be the case here, we&apos;ll have to copy and paste the header code into all pages of our site. Not only is that kind of a pain, it&apos;s also bad coding practice.</p>
+<p><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">The &apos;DRY&apos; Principle</a> states that we should do something to reduce unnecessary code repetition. Ideally what we&apos;d like to do here is write the code for the header once and have it generate on every page. We&apos;re going to do that with something known as a <code>template engine</code>. We&apos;ll be using Handlebars.js.</p>
+<p><img src="../img/day_1/handlebars.png" alt="Handlebars"></p>
+<blockquote>
+<p><a href="http://handlebarsjs.com/installation.html" target="_blank">Download Handlebars here</a></p>
+</blockquote>
 
                                 
                                 </section>
@@ -549,7 +622,7 @@
 
             
                 
-                <a href="project_setup.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Project Set Up : Terminal and Git">
+                <a href="project_setup.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Project Creation : Terminal and Git">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -561,7 +634,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Building the foundations : HTML","level":"1.2.4","depth":2,"next":{"title":"Day 2","level":"1.3","depth":1,"ref":"","articles":[{"title":"Getting Stylish with CSS","level":"1.3.1","depth":2,"path":"Day_2/css1.md","ref":"Day_2/css1.md","articles":[]},{"title":"Responsive Design","level":"1.3.2","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]}]},"previous":{"title":"Project Set Up : Terminal and Git","level":"1.2.3","depth":2,"path":"Day_1/project_setup.md","ref":"./Day_1/project_setup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/html1.md","mtime":"2017-07-10T15:49:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-10T16:52:28.346Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Building foundations : HTML & CSS","level":"1.2.4","depth":2,"next":{"title":"Day 2","level":"1.3","depth":1,"ref":"","articles":[{"title":"Getting Stylish with CSS","level":"1.3.1","depth":2,"path":"Day_2/css1.md","ref":"Day_2/css1.md","articles":[]},{"title":"Responsive Design","level":"1.3.2","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]},{"title":"CSS Framework : Bootstrap","level":"1.3.3","depth":2,"path":"Day_2/bootstrap.md","ref":"./Day_2/bootstrap.md","articles":[]}]},"previous":{"title":"Project Creation : Terminal and Git","level":"1.2.3","depth":2,"path":"Day_1/project_setup.md","ref":"./Day_1/project_setup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/html1.md","mtime":"2017-07-16T10:58:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-16T11:23:03.394Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

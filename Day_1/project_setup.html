@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Project Set Up : Terminal and Git · GitBook</title>
+        <title>Project Creation : Terminal and Git · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -147,7 +147,7 @@
                 <a href="project_setup.html">
             
                     
-                    Project Set Up : Terminal and Git
+                    Project Creation : Terminal and Git
             
                 </a>
             
@@ -160,7 +160,7 @@
                 <a href="html1.html">
             
                     
-                    Building the foundations : HTML
+                    Building foundations : HTML & CSS
             
                 </a>
             
@@ -213,6 +213,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.3" data-path="../Day_2/bootstrap.html">
+            
+                <a href="../Day_2/bootstrap.html">
+            
+                    
+                    CSS Framework : Bootstrap
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -237,7 +250,7 @@
                 <span>
             
                     
-                    CSS Framework : Bootstrap
+                    New CSS features : Flexbox and Grid
             
                 </span>
             
@@ -250,19 +263,6 @@
                 <span>
             
                     
-                    New CSS features : Flexbox and Grid
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" >
-            
-                <span>
-            
-                    
                     All about Accessibility
             
                 </span>
@@ -271,7 +271,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" >
+        <li class="chapter " data-level="1.4.3" >
             
                 <span>
             
@@ -342,6 +342,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    Working with the DOM : Modals
+            
+                </span>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -379,7 +392,7 @@
                 <span>
             
                     
-                    Topic
+                    Where to go from here
             
                 </span>
             
@@ -474,7 +487,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Project Set Up : Terminal and Git</a>
+        <a href=".." >Project Creation : Terminal and Git</a>
     </h1>
 </div>
 
@@ -489,9 +502,79 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>Now that we&apos;ve got everything installed, let&apos;s go ahead and get started with the foundations of our project.</p>
-<h1 id="terminal-basics">Terminal basics</h1>
-<h1 id="git--what-and-why">Git : What and why?</h1>
+                                <h1 id="contents">Contents</h1>
+<ul>
+<li><a href="#one">What is the Terminal?</a></li>
+<li><a href="#two">Git : What and why?</a></li>
+<li><a href="#three">Walkthrough</a></li>
+<li><a href="#four">Commands cheat sheet</a></li>
+</ul>
+<hr>
+<p>Now that we&apos;ve got everything installed, let&apos;s go ahead and get started with the foundations of our project.</p>
+<h1 id="what-is-the-terminal"><span id="one">What is the Terminal?</span></h1>
+<p>You can think of the Terminal as the brain of your computer. It&apos;s the inner workings of your computer at the very lowest level, without the visual user interface presented when you explore your files and folders using Finder or Explorer. Using Terminal can be a bit bewildering at first, but once you get the hang of it, it&apos;s a much faster and simpler way of working with files.</p>
+<h1 id="git--what-and-why"><span id="two">Git : What and why?</span></h1>
+<p>Git is the <em>Command Line Interface (CLI)</em> component of GitHub. GitHub basically allows us to host our projects (called <em>repositories</em>) in the virtual cloud, and even host our projects there as website for people around the world to view.</p>
+<p>Think of writing a letter on your computer; you regularly save the file you&apos;re working on in Microsoft Word to protect it in case you make a mistake or something goes wrong with your computer. If you want to go back to a previous version of your file, you can just use the &apos;undo&apos; button.</p>
+<p>Git allows us to do this, but with a whole folder of files all at once. You can create save points (called <em>&apos;commits&apos;</em>), to which you can return at any point if things go wrong. Not only that, but Git allows several people to work on a project at the same time without stumbling all over each other&apos;s changes to the folder, via <em>&apos;branches&apos;</em>.</p>
+<h3 id="so-why-are-we-using-git-and-github-for-this-bootcamp">So why are we using Git and GitHub for this bootcamp?</h3>
+<p>Put simply, for two main reasons:</p>
+<ul>
+<li>It will allow us to work in a fast and safe manner, where mistakes aren&apos;t a major problem and can be easily undone.</li>
+<li>It will allow us to very easily get what we make up on the internet at the end of the week, for the world to see.</li>
+</ul>
+<hr>
+<h1 id="walkthrough"><span id="three">Walkthrough</span></h1>
+<p><strong>1.</strong> To begin, we&apos;ll need to head to github.com and make a new repository. Click the <code>+</code> sign in the header menu, and select <code>New repository</code>.</p>
+<p><img src="../img/day_1/new-repo.png" alt="&apos;Making a new repo on GitHub&apos;"></p>
+<hr>
+<p>Call your repository whatever you want, and add a description if you want to. Make sure you tick the radio button for making the repo public, and check the <code>&apos;Initialize this repository with a README&apos;</code> box down the bottom. Then click the `&apos;Create repository&apos; button.</p>
+<hr>
+<p><img src="../img/day_1/repo-options.png" alt="&apos;Selecting your repo options&apos;"></p>
+<p>Next, we need to <code>clone</code> this folder from the internet onto our computer. After you created your repository just it, GitHub would have placed you on the homepage for your repo. Click the green &apos;Clone or download&apos; button and copy the <code>HTTPS</code> URL in the input box.</p>
+<p>Now we&apos;re going to use our first <code>terminal</code> command.</p>
+<hr>
+<p><strong>2.</strong> Open <code>terminal</code>, and navigate to where you want your project files to be located. A good choice is the Desktop, so that your files will be easily visible.</p>
+<p>If you&apos;re not sure which folder you&apos;re currently looking at in the Terminal, you can type <code>pwd</code> (print working directory).</p>
+<p>To move around on your computer, you&apos;ll need to use the <code>cd</code> command (change directory). If you want to see what&apos;s in the folder you&apos;re currently in, you can type <code>ls</code> to list the files in there.</p>
+<p>Once you&apos;re in the location where you want to copy your project folder to, enter <code>git clone URL_HERE</code> - replacing the <code>URL_HERE</code> with the URL you copied from GitHub.</p>
+<h2 id=""><img src="../img/day_1/git-clone.png" alt="&apos;Using the Terminal to make our project folder&apos;"></h2>
+<p><strong>3.</strong> GitHub will clone the repo onto your computer. If you type <code>ls</code> into the Terminal now, you&apos;ll see your new repo folder in your location. Use <code>cd</code> to go into it. If you use <code>ls</code> inside of this new folder, you&apos;ll see that it&apos;s empty except for the <code>README.md</code> file. But there are a few extra things going on here; because we cloned the folder down from GitHub, this folder is automatically linked to it&apos;s copy in the cloud, on GitHub. This means that we can easily <code>push</code> (upload) and <code>pull</code> (download) files between our computer and the cloud.</p>
+<hr>
+<p><strong>4.</strong> We&apos;re going to do two more things before we start coding;</p>
+<ol>
+<li>Make our first file using the Terminal, and</li>
+<li>Make our first commit.</li>
+</ol>
+<p>In the Terminal, type <code>touch index.html</code> and press enter. Now type <code>ls</code>, and you&apos;ll see your newly-created file within the folder. Hopefully you&apos;re beginning to see how using the Terminal can be much faster than moving around in Finder/Explorer and right-clicking to do everything!</p>
+<p>But there&apos;s something else interesting that just happened. Type <code>gst</code> into your Terminal - this is short for &apos;Git status&apos;, and will tell you what&apos;s going on with Git now. You should see something like this:</p>
+<p><img src="../img/day_1/gst.png" alt="&apos;Using the Terminal to make our project folder&apos;"></p>
+<p>Git has spotted that you&apos;ve made changes to your folder! It can see that you&apos;ve made a new file, and it&apos;s telling you that this makes your copy of the repo different to the one present on GitHub. In order to match them up again, do the following:</p>
+<blockquote>
+<ol>
+<li>Type <code>git add .</code> (add all folder contents to Git tracking). Type <code>gst</code> to see what&apos;s going on.</li>
+<li>Type <code>git commit -m &apos;First commit&apos;</code> (This commits the current state of the repo to a save point, with a message). Then <code>gst</code>.</li>
+<li>Type <code>git push</code> (this uploads the current save state of our repo to GitHub) Now <code>gst</code> once more.</li>
+</ol>
+</blockquote>
+<p>This updates the online version of our repo with our local version, which means that the changes we&apos;ve made are now safely saved and stored in the cloud. </p>
+<p>Now we&apos;re ready to start coding!</p>
+<hr>
+<h1 id="commands-cheat-sheet"><span id="four">Commands cheat sheet</span></h1>
+<ul>
+<li><code>pwd</code> - print working directory (where am I right now?)</li>
+<li><code>cd</code>- change directory (move me elsewhere).</li>
+<li><code>ls</code>- list items in this folder (directory).</li>
+<li><code>touch FILE_NAME</code> - make a file</li>
+</ul>
+<p><strong> Git commands</strong></p>
+<ul>
+<li><code>gst / git status</code> - show me what&apos;s going on with Git.</li>
+<li><code>git add .</code> - add the contents of this folder to Git tracking</li>
+<li><code>git commit -m &quot;MESSAGE_HERE&quot;</code> - &apos;save&apos; the currently tracked files and add a message</li>
+<li><code>git push</code> - upload this save point to GitHub.</li>
+<li><code>git clone URL_HERE</code>- clone a GitHub repo down onto your computer.</li>
+</ul>
 
                                 
                                 </section>
@@ -524,7 +607,7 @@
                 </a>
                 
                 
-                <a href="html1.html" class="navigation navigation-next " aria-label="Next page: Building the foundations : HTML">
+                <a href="html1.html" class="navigation navigation-next " aria-label="Next page: Building foundations : HTML & CSS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -535,7 +618,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Project Set Up : Terminal and Git","level":"1.2.3","depth":2,"next":{"title":"Building the foundations : HTML","level":"1.2.4","depth":2,"path":"Day_1/html1.md","ref":"./Day_1/html1.md","articles":[]},"previous":{"title":"What is the Front End?","level":"1.2.2","depth":2,"path":"Day_1/front_end.md","ref":"./Day_1/front_end.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/project_setup.md","mtime":"2017-07-10T12:21:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-10T16:52:28.346Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Project Creation : Terminal and Git","level":"1.2.3","depth":2,"next":{"title":"Building foundations : HTML & CSS","level":"1.2.4","depth":2,"path":"Day_1/html1.md","ref":"./Day_1/html1.md","articles":[]},"previous":{"title":"What is the Front End?","level":"1.2.2","depth":2,"path":"Day_1/front_end.md","ref":"./Day_1/front_end.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/project_setup.md","mtime":"2017-07-15T14:43:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-16T11:23:03.394Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

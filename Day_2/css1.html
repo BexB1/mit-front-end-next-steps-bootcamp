@@ -145,7 +145,7 @@
                 <a href="../Day_1/project_setup.html">
             
                     
-                    Project Set Up : Terminal and Git
+                    Project Creation : Terminal and Git
             
                 </a>
             
@@ -158,7 +158,7 @@
                 <a href="../Day_1/html1.html">
             
                     
-                    Building the foundations : HTML
+                    Building foundations : HTML & CSS
             
                 </a>
             
@@ -211,6 +211,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.3" data-path="bootstrap.html">
+            
+                <a href="bootstrap.html">
+            
+                    
+                    CSS Framework : Bootstrap
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -235,7 +248,7 @@
                 <span>
             
                     
-                    CSS Framework : Bootstrap
+                    New CSS features : Flexbox and Grid
             
                 </span>
             
@@ -248,19 +261,6 @@
                 <span>
             
                     
-                    New CSS features : Flexbox and Grid
-            
-                </span>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4.3" >
-            
-                <span>
-            
-                    
                     All about Accessibility
             
                 </span>
@@ -269,7 +269,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" >
+        <li class="chapter " data-level="1.4.3" >
             
                 <span>
             
@@ -340,6 +340,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.5.4" >
+            
+                <span>
+            
+                    
+                    Working with the DOM : Modals
+            
+                </span>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -377,7 +390,7 @@
                 <span>
             
                     
-                    Topic
+                    Where to go from here
             
                 </span>
             
@@ -489,17 +502,39 @@
                                 
                                 <h1 id="contents">Contents</h1>
 <ul>
-<li><a href="#">Making and linking to our first stylesheet</a></li>
+<li><a href="#">Making and linking to our stylesheets</a></li>
 <li><a href="#">The &apos;Cascade&apos;</a></li>
-<li><a href="#">Normalizr</a></li>
-<li><a href="#">All about selectors</a></li>
+<li><a href="#">Selectors</a></li>
 <li><a href="#">Advanced selectors</a></li>
-<li><a href="#">Fancy fonts</a></li>
+<li><a href="#">Fonts</a></li>
 <li><a href="#">Working with colour</a></li>
 <li><a href="#">CSS hacks : using Chrome&apos;s Developer Tools</a></li>
+<li><a href="#">CSS standards</a></li>
 <li><a href="#">Links and resources</a></li>
 </ul>
 <hr>
+<h1 id="making-and-linking-to-our-stylesheets"><span id="one">Making and linking to our stylesheets</span></h1>
+<h2 id="normalize"><span id="">Normalize</span></h2>
+<p>All browsers have default CSS styling. You may have noticed that our image has a white border around it.</p>
+<p><img src="../img/day_1/normalize-border.png" alt="Not what we want"></p>
+<p>This isn&apos;t really what we want; for a nice, sharp layout, we want our image sitting flush with the edge of the browser window. To achieve this, we need to remove the default CSS styling in the browser so that we can get a &apos;clean slate&apos; state for our custom CSS to build on. Enter Normalize.</p>
+<blockquote>
+<p>Head to <a href="https://necolas.github.io/normalize.css/" target="_blank">https://necolas.github.io/normalize.css/</a> to download Normalize. Select all of the code in the window and copy it.</p>
+</blockquote>
+<p>We need to put the Normalize styling in a CSS file. Open <code>Terminal</code> and, in the root of your project folder, type the following:</p>
+<pre><code>mkdir css
+touch css/normalize.css
+</code></pre><p>Then in your IDE, paste the contents of your clipboard into <code>normalize.css</code> and save.</p>
+<h1 id="the-cascade"><span id="#">The Cascade</span></h1>
+<h1 id="selectors"><span id="#">Selectors</span></h1>
+<h1 id="advanced-selectors"><span id="#">Advanced Selectors</span></h1>
+<h1 id="fonts"><span id="#">Fonts</span></h1>
+<h1 id="working-with-colour"><span id="#">Working with colour</span></h1>
+<h3 id="gradients">Gradients</h3>
+<h3 id="transparency">Transparency</h3>
+<h1 id="using-the-dev-tools"><span id="#">Using the Dev Tools</span></h1>
+<h1 id="css-standards"><span id="#">CSS Standards</span></h1>
+<h1 id="links-and-resources"><span id="#">Links and Resources</span></h1>
 
                                 
                                 </section>
@@ -539,7 +574,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Getting Stylish with CSS","level":"1.3.1","depth":2,"next":{"title":"Responsive Design","level":"1.3.2","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]},"previous":{"title":"Day 2","level":"1.3","depth":1,"ref":"","articles":[{"title":"Getting Stylish with CSS","level":"1.3.1","depth":2,"path":"Day_2/css1.md","ref":"Day_2/css1.md","articles":[]},{"title":"Responsive Design","level":"1.3.2","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_2/css1.md","mtime":"2017-07-10T13:04:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-10T16:52:28.346Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Getting Stylish with CSS","level":"1.3.1","depth":2,"next":{"title":"Responsive Design","level":"1.3.2","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]},"previous":{"title":"Day 2","level":"1.3","depth":1,"ref":"","articles":[{"title":"Getting Stylish with CSS","level":"1.3.1","depth":2,"path":"Day_2/css1.md","ref":"Day_2/css1.md","articles":[]},{"title":"Responsive Design","level":"1.3.2","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]},{"title":"CSS Framework : Bootstrap","level":"1.3.3","depth":2,"path":"Day_2/bootstrap.md","ref":"./Day_2/bootstrap.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_2/css1.md","mtime":"2017-07-16T11:17:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-16T11:23:03.394Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
