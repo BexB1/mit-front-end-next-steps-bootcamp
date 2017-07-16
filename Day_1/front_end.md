@@ -2,6 +2,8 @@
 
 The world of web development is, much like the rest of the Tech world, absolutely full of technical jargon. Listening to professional Web Developers speak can often feel like listening to a foreign language to anyone who doesn't know the lingo. It'd not be any good for us to go charging ahead without first discussing exactly _what it is_ that we're here to study. So let's go ahead and explore what we mean by 'Front End Development'.
 
+**Note : there is a Glossary at the bottom of the table of contents.**
+
 !['Front End Tech'](../img/day_1/html-css-js.png)
 
 ## In the beginning, there was HTML...
