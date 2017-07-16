@@ -1,7 +1,7 @@
 * [Day 1]()
   * [Getting Set Up](./Day_1/getting_set_up.md)
   * [What is the Front End?](./Day_1/front_end.md)
-  * [Project Set Up : Terminal and Git](./Day_1/project_setup.md)
+  * [Project Creation : Terminal and Git](./Day_1/project_setup.md)
   * [Building the foundations : HTML](./Day_1/html1.md)
 * [Day 2]()
   * [Getting Stylish with CSS](/Day_2/css1.md)
@@ -19,6 +19,7 @@
 * [Day 5]()
   * [Topic]()
   * [It's Time to Deploy!](./Day_5/deploy.md)
+  * [Where to go from here]()
 
 
 * [Resources]()

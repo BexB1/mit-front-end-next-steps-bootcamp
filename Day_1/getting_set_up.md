@@ -31,7 +31,13 @@ Next, we need to make an account of GitHub so that the code we write can be stor
 
 'IDE' stands for 'Integrated Development Environment'. An IDE is basically a program designed specifically for developers to use in the writing of code. For this bootcamp, we'll be using Sublime Text 3. Sublime is a very widely-use IDE with excellent community support. If you've used Microsoft Word before, you shouldn't find it difficult to use. But as we go along, you'll see that Sublime offers a lot of useful features for coders.
 
+**Note:** If you have a preferred IDE that you're comfortable which isn't Sublime Text (eg, Atom), then please feel free to use that instead.
+
 > [Install Sublime Text 3](https://www.sublimetext.com/3)
+
+### Some extra packages for Sublime
+
+There are a few extra bits we can install to make our time using Sublime Text a bit easier. With Sublime open, press `CMD + Shift + P` (`CTRL + Shift + P` on PC). Select 'Package control : Install Package' and enter 'SideBarEnhancements'. Select it to install. This will allow us to open our files in Chrome directly from Sublime.
 
 
 # 5. Install Google Chrome
