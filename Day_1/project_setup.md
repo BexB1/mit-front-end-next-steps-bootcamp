@@ -15,7 +15,7 @@ You can think of the Terminal as the brain of your computer. It's the inner work
 
 # <span id="two">Git : What and why?</span>
 
-Git is the _Command Line Interface (CLI)_ component of GitHub. GitHub basically allows us to host our projects (called _repositories_) in the virtual cloud, and even host our projects there as website for people around the world to view.
+Git is the _Command Line Interface (CLI)_ component of GitHub. GitHub basically allows us to host our projects (called _repositories_) in the virtual cloud, and even host our projects there as a website for people around the world to view.
 
 Think of writing a letter on your computer; you regularly save the file you're working on in Microsoft Word to protect it in case you make a mistake or something goes wrong with your computer. If you want to go back to a previous version of your file, you can just use the 'undo' button.
 
@@ -39,7 +39,7 @@ Put simply, for two main reasons:
 
 ---
 
-Call your repository whatever you want, and add a description if you want to. Make sure you tick the radio button for making the repo public, and check the `'Initialize this repository with a README'` box down the bottom. Then click the `'Create repository' button.
+Call your repository whatever you want, and add a description if you want to. Make sure you tick the radio button for making the repo public and check the `'Initialize this repository with a README'` box down the bottom. Then click the `'Create repository' button.
 
 ---
 
@@ -66,12 +66,13 @@ Once you're in the location where you want to copy your project folder to, enter
 
 ---
 
-**4.** We're going to do two more things before we start coding;
+**4.** We're going to do three more things before we start coding;
 
   1. Make our first file using the Terminal, and
   2. Make our first commit.
+  3. Get `npm` set up with our project.
 
-In the Terminal, type `touch index.html` and press enter. Now type `ls`, and you'll see your newly-created file within the folder. Hopefully you're beginning to see how using the Terminal can be much faster than moving around in Finder/Explorer and right-clicking to do everything!
+In the Terminal, type `touch index.html` and press enter. Now type `ls`, and you'll see your newly-created file within the folder. Hopefully, you're beginning to see how using the Terminal can be much faster than moving around in Finder/Explorer and right-clicking to do everything!
 
 But there's something else interesting that just happened. Type `gst` into your Terminal - this is short for 'Git status', and will tell you what's going on with Git now. You should see something like this:
 
@@ -85,6 +86,16 @@ Git has spotted that you've made changes to your folder! It can see that you've 
 
 
 This updates the online version of our repo with our local version, which means that the changes we've made are now safely saved and stored in the cloud. 
+
+### npm
+
+Lastly, in the `Terminal`, type 
+
+```
+npm init
+```
+
+You'll have a few questions pop up in the `Terminal`. Just press `enter` for them all. This sets up an npm config file in our project root called `package.json`.
 
 
 Now we're ready to start coding!

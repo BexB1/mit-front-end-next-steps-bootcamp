@@ -16,6 +16,8 @@ But these days we live in the 'Internet of Things'; an ever-growing selection of
 
 Responsive design means that no matter the size or shape of the screen being used to display content, that content can be reliably viewed and interacted with. Responsive design is now a web standard; it's not optional. Failing to build your front end with responsiveness in mind can not only make your site unattractive for your users - it can make it outright unusable.
 
+# <span id="two">Responsive measurements</span>
+
 # <span id="two">Using media queries</span>
 
 # <span id="three">Making images responsive</span>

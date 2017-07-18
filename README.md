@@ -7,9 +7,11 @@
 
 In this course, you’ll learn basic-to-intermediate front end development skills. You’ll learn to build webpages in HTML, style and animate them in CSS, bring them to life with JavaScript, and work with coding tools used by professional developers. Whether you’re brand new to coding or already have some skills, you’ll walk away from this course having made your very own project to be proud of.
 
-We'll be coding a project together throughout the week during our lessons, but you absolutely don't have to build what we're building. If you'd rather tweak the site we make to your own liking, or even just apply what we learn together to a project that is entirely your own, that's perectly okay.
+We'll be coding a project together throughout the week during our lessons, but you absolutely don't have to build what we're building. If you'd rather tweak the site we make to your own liking, or even just apply what we learn together to a project that is entirely your own, that's perfectly okay.
  
 ## Two little things...
+
+Repeat after me...
 
   1. I promise that if I have a question, I will ask it and not hold on to it for fear of sounding silly. 
   **There are no stupid questions.**

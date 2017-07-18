@@ -4,7 +4,7 @@
 - <a href="#two">Hello, world!</a>
 - <a href="#three">Using comments</a>
 - <a href="#four">Fleshing out our page</a>
-- <a href="#five">Keeping things DRY with partials</a>
+- <a href="#five">Linking stylesheets in HTML pages</a>
 
 ---
 
@@ -34,7 +34,7 @@ HTML files are typically laid out as such:
 Let's go through these one-by-one.
 
   - `<!DOCTYPE html>` tells the browser what type of code to expect.
-  - The `<html></html>` tags enclose all of the HTML on our page, and tell the browser where to start and stop reading the code.
+  - The `<html></html>` tags enclose all of the HTML on our page and tell the browser where to start and stop reading the code.
   - The `<head>` tags contain all of the HTML code which doesn't make up the body of the web page. Commonly found within the head tags are things like stylesheet links and 'metadata', such as the title of the page which shows up n the browser tab.
   - The`<body>` tags contain the meat of the page; here's where we'll declare all of the components making up the visual structure of the page.
 
@@ -74,7 +74,7 @@ This at least makes the image fully visible, but it's not a great solution; idea
 <img src="./img/lake.jpeg" style="max-width:100%;">
 ```
 
-Inline CSS is when you attach the CSS styling directly to the tag of the HTML element it affects. Shortly we'll make some style sheets and move all of our styling into there, but for now this is a temporary solution to our image sizing problem.
+Inline CSS is when you attach the CSS styling directly to the tag of the HTML element it affects. Shortly we'll make some style sheets and move all of our stylings into there, but for now, this is a temporary solution to our image sizing problem.
 
 # <span id="three">4. Using comments</span>
 
@@ -121,17 +121,133 @@ Add a `div` element beneath our image. `div` stands for 'division', but it's bet
 
 ![](../img/day_1/div-text.png)
 
-### Making a header and footer
+### Making a header
+
+Every page needs a convenient form of navigation so that the user can get around the site, and typically a header is a good way to provide this. Our header will sit at the top of the page, and contain all the most vital links the user will need.
+
+Code:
+
+```html
+<header>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+  </ul>
+</header>
+```
+
+The `<header>` tag is an example of _semantic HTML_. It's a descriptive divider for the elements in our page. Other example of semantic HTML elements include `<footer>`, `<article>` and `<section`.
+
+Inside our header section, we have the `ul` and `li` tags, which stand for 'unordered list' and 'list item' respectively.
+
+Right now, our header items aren't pointing anywhere. Let's fix that now. 
 
 ### Making and linking to additional pages
 
+In the `Terminal`, while in the root directory of our project, type:
 
-# <span id="five">6. Keeping things DRY with partials</span>
+```
+touch about.html
+```
 
-Typically a header will be displayed constantly across all pages on a single site. Trouble is, if we want that to be the case here, we'll have to copy and paste the header code into all pages of our site. Not only is that kind of a pain, it's also bad coding practice.
+to create our about page. For now, we'll just put some filler text in `about`:
 
-[The 'DRY' Principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) states that we should do something to reduce unnecessary code repetition. Ideally what we'd like to do here is write the code for the header once and have it generate on every page. We're going to do that with something known as a `template engine`. We'll be using Handlebars.js.
+```html
+<h1>This is the about page.</h1>
+```
 
-![Handlebars](../img/day_1/handlebars.png)
+Now that we've got two pages, we can link between them in the header. Return to `index.html`, and add `<a>` tags to the `list items`:
 
-> [Download Handlebars here](http://handlebarsjs.com/installation.html)
+```html
+<header>
+  <ul>
+    <li>
+      <a href="">Home</a>
+    </li>
+    <li>
+      <a href="">About</a>
+    </li>
+  </ul>
+</header>
+```
+
+You may have noticed that I've moved the `<a>` tags onto a new line between the `<li>` tags, and the `<li>` tags are indented within the `<ul>` tags. Indentation is a vital part of writing **readable code**, and is considered best practice in coding. Breaking nested tags onto their own lines also helps to keep things tidy.
+
+## Making a stylesheet
+
+Speaking of lines, let's get our header links on a single horizontal line so that it looks nicer and takes up less vertical space. For that, we'll need to make our first CSS stylesheet:
+
+`Terminal`:
+
+```
+mkdir css
+touch css/style.css
+```
+
+**`style.css`**:
+
+```css
+header ul li {
+  display: inline-block;
+  list-decoration: none;
+}
+```
+
+The above CSS commands the browser to look for any `li` tags within the `ul` tags, which in turn are within the `header` tag, and apply the styling within. The property-value pairs here will line the `li` elements up horizontally, and remove their bullet points.
+
+Here's the syntax for writing CSS rules:
+
+![How to write CSS](../img/day_1/css-syntax.jpg)
+
+Your project file structure should now look like this:
+
+![File structure](../img/day_1/file-structure.png)
+
+
+# <span id="five">Linking stylesheets in HTML pages</span>
+
+In order for our new CSS to apply to our HTML, we'll need to make a `<link>` tag in the `<head>` of our `index.html` page.
+
+`index.html`:
+
+```html
+<head>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+```
+
+Refresh your page in Chrome, and you should see the style apply to your header.
+
+All that's left to do now is to show the `anchor (<a>)` tags where to point:
+
+```html
+<header>
+  <ul>
+    <li>
+      <a href="./index.html">Home</a>
+    </li>
+    <li>
+      <a href="./about.html">About</a>
+    </li>
+  </ul>
+</header>
+```
+
+If you head back to your page in Chrome, you'll now see that the header list items are links, and you can now move between your pages.
+
+We won't be doing anything with the about page until we're doing styling `index`, so here we can just put a link back to the homepage:
+
+```html
+<a href="./index.html">Home</a>
+```
+
+> **NOTE** <br />
+> We've made some pretty significant changes to our project, so now would be a good time to commit them.
+
+> 1. Type `gst` to see our changes.
+> 2. `git add .` to add all of our changes to staging.
+> 3. `git commit -m "Made header element"` to write the commit message and make the commit.
+> 4. `git push` to push our update to GitHub.
+
+Now let's move on to continuing to build out our HTML, and styling it up.
+
