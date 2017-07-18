@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Project Creation : Terminal and Git · GitBook</title>
+        <title>Project Creation : Terminal, Git & npm · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -60,7 +60,7 @@
     <link rel="next" href="html1.html" />
     
     
-    <link rel="prev" href="front_end.html" />
+    <link rel="prev" href="wireframes.html" />
     
 
     </head>
@@ -142,12 +142,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.3" data-path="project_setup.html">
+        <li class="chapter " data-level="1.2.3" data-path="wireframes.html">
             
-                <a href="project_setup.html">
+                <a href="wireframes.html">
             
                     
-                    Project Creation : Terminal and Git
+                    What we'll be building
             
                 </a>
             
@@ -155,12 +155,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="html1.html">
+        <li class="chapter active" data-level="1.2.4" data-path="project_setup.html">
+            
+                <a href="project_setup.html">
+            
+                    
+                    Project Creation : Terminal, Git & npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="html1.html">
             
                 <a href="html1.html">
             
                     
                     Building foundations : HTML & CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="css1.html">
+            
+                <a href="css1.html">
+            
+                    
+                    Getting Stylish with CSS
             
                 </a>
             
@@ -187,20 +213,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../Day_2/css1.html">
-            
-                <a href="../Day_2/css1.html">
-            
-                    
-                    Getting Stylish with CSS
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.2" data-path="../Day_2/responsive.html">
+        <li class="chapter " data-level="1.3.1" data-path="../Day_2/responsive.html">
             
                 <a href="../Day_2/responsive.html">
             
@@ -213,7 +226,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../Day_2/bootstrap.html">
+        <li class="chapter " data-level="1.3.2" data-path="../Day_2/bootstrap.html">
             
                 <a href="../Day_2/bootstrap.html">
             
@@ -374,7 +387,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../Day_5/deploy.html">
+        <li class="chapter " data-level="1.6.1" data-path="../Day_5/partials.html">
+            
+                <a href="../Day_5/partials.html">
+            
+                    
+                    Making a partial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Day_5/deploy.html">
             
                 <a href="../Day_5/deploy.html">
             
@@ -387,7 +413,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" >
+        <li class="chapter " data-level="1.6.3" >
             
                 <span>
             
@@ -487,7 +513,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Project Creation : Terminal and Git</a>
+        <a href=".." >Project Creation : Terminal, Git & npm</a>
     </h1>
 </div>
 
@@ -514,7 +540,7 @@
 <h1 id="what-is-the-terminal"><span id="one">What is the Terminal?</span></h1>
 <p>You can think of the Terminal as the brain of your computer. It&apos;s the inner workings of your computer at the very lowest level, without the visual user interface presented when you explore your files and folders using Finder or Explorer. Using Terminal can be a bit bewildering at first, but once you get the hang of it, it&apos;s a much faster and simpler way of working with files.</p>
 <h1 id="git--what-and-why"><span id="two">Git : What and why?</span></h1>
-<p>Git is the <em>Command Line Interface (CLI)</em> component of GitHub. GitHub basically allows us to host our projects (called <em>repositories</em>) in the virtual cloud, and even host our projects there as website for people around the world to view.</p>
+<p>Git is the <em>Command Line Interface (CLI)</em> component of GitHub. GitHub basically allows us to host our projects (called <em>repositories</em>) in the virtual cloud, and even host our projects there as a website for people around the world to view.</p>
 <p>Think of writing a letter on your computer; you regularly save the file you&apos;re working on in Microsoft Word to protect it in case you make a mistake or something goes wrong with your computer. If you want to go back to a previous version of your file, you can just use the &apos;undo&apos; button.</p>
 <p>Git allows us to do this, but with a whole folder of files all at once. You can create save points (called <em>&apos;commits&apos;</em>), to which you can return at any point if things go wrong. Not only that, but Git allows several people to work on a project at the same time without stumbling all over each other&apos;s changes to the folder, via <em>&apos;branches&apos;</em>.</p>
 <h3 id="so-why-are-we-using-git-and-github-for-this-bootcamp">So why are we using Git and GitHub for this bootcamp?</h3>
@@ -528,7 +554,7 @@
 <p><strong>1.</strong> To begin, we&apos;ll need to head to github.com and make a new repository. Click the <code>+</code> sign in the header menu, and select <code>New repository</code>.</p>
 <p><img src="../img/day_1/new-repo.png" alt="&apos;Making a new repo on GitHub&apos;"></p>
 <hr>
-<p>Call your repository whatever you want, and add a description if you want to. Make sure you tick the radio button for making the repo public, and check the <code>&apos;Initialize this repository with a README&apos;</code> box down the bottom. Then click the `&apos;Create repository&apos; button.</p>
+<p>Call your repository whatever you want, and add a description if you want to. Make sure you tick the radio button for making the repo public and check the <code>&apos;Initialize this repository with a README&apos;</code> box down the bottom. Then click the `&apos;Create repository&apos; button.</p>
 <hr>
 <p><img src="../img/day_1/repo-options.png" alt="&apos;Selecting your repo options&apos;"></p>
 <p>Next, we need to <code>clone</code> this folder from the internet onto our computer. After you created your repository just it, GitHub would have placed you on the homepage for your repo. Click the green &apos;Clone or download&apos; button and copy the <code>HTTPS</code> URL in the input box.</p>
@@ -541,12 +567,13 @@
 <h2 id=""><img src="../img/day_1/git-clone.png" alt="&apos;Using the Terminal to make our project folder&apos;"></h2>
 <p><strong>3.</strong> GitHub will clone the repo onto your computer. If you type <code>ls</code> into the Terminal now, you&apos;ll see your new repo folder in your location. Use <code>cd</code> to go into it. If you use <code>ls</code> inside of this new folder, you&apos;ll see that it&apos;s empty except for the <code>README.md</code> file. But there are a few extra things going on here; because we cloned the folder down from GitHub, this folder is automatically linked to it&apos;s copy in the cloud, on GitHub. This means that we can easily <code>push</code> (upload) and <code>pull</code> (download) files between our computer and the cloud.</p>
 <hr>
-<p><strong>4.</strong> We&apos;re going to do two more things before we start coding;</p>
+<p><strong>4.</strong> We&apos;re going to do three more things before we start coding;</p>
 <ol>
 <li>Make our first file using the Terminal, and</li>
 <li>Make our first commit.</li>
+<li>Get <code>npm</code> set up with our project.</li>
 </ol>
-<p>In the Terminal, type <code>touch index.html</code> and press enter. Now type <code>ls</code>, and you&apos;ll see your newly-created file within the folder. Hopefully you&apos;re beginning to see how using the Terminal can be much faster than moving around in Finder/Explorer and right-clicking to do everything!</p>
+<p>In the Terminal, type <code>touch index.html</code> and press enter. Now type <code>ls</code>, and you&apos;ll see your newly-created file within the folder. Hopefully, you&apos;re beginning to see how using the Terminal can be much faster than moving around in Finder/Explorer and right-clicking to do everything!</p>
 <p>But there&apos;s something else interesting that just happened. Type <code>gst</code> into your Terminal - this is short for &apos;Git status&apos;, and will tell you what&apos;s going on with Git now. You should see something like this:</p>
 <p><img src="../img/day_1/gst.png" alt="&apos;Using the Terminal to make our project folder&apos;"></p>
 <p>Git has spotted that you&apos;ve made changes to your folder! It can see that you&apos;ve made a new file, and it&apos;s telling you that this makes your copy of the repo different to the one present on GitHub. In order to match them up again, do the following:</p>
@@ -558,6 +585,10 @@
 </ol>
 </blockquote>
 <p>This updates the online version of our repo with our local version, which means that the changes we&apos;ve made are now safely saved and stored in the cloud. </p>
+<h3 id="npm">npm</h3>
+<p>Lastly, in the <code>Terminal</code>, type </p>
+<pre><code>npm init
+</code></pre><p>You&apos;ll have a few questions pop up in the <code>Terminal</code>. Just press <code>enter</code> for them all. This sets up an npm config file in our project root called <code>package.json</code>.</p>
 <p>Now we&apos;re ready to start coding!</p>
 <hr>
 <h1 id="commands-cheat-sheet"><span id="four">Commands cheat sheet</span></h1>
@@ -602,7 +633,7 @@
 
             
                 
-                <a href="front_end.html" class="navigation navigation-prev " aria-label="Previous page: What is the Front End?">
+                <a href="wireframes.html" class="navigation navigation-prev " aria-label="Previous page: What we'll be building">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -618,7 +649,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Project Creation : Terminal and Git","level":"1.2.3","depth":2,"next":{"title":"Building foundations : HTML & CSS","level":"1.2.4","depth":2,"path":"Day_1/html1.md","ref":"./Day_1/html1.md","articles":[]},"previous":{"title":"What is the Front End?","level":"1.2.2","depth":2,"path":"Day_1/front_end.md","ref":"./Day_1/front_end.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/project_setup.md","mtime":"2017-07-15T14:43:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-16T11:23:03.394Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Project Creation : Terminal, Git & npm","level":"1.2.4","depth":2,"next":{"title":"Building foundations : HTML & CSS","level":"1.2.5","depth":2,"path":"Day_1/html1.md","ref":"./Day_1/html1.md","articles":[]},"previous":{"title":"What we'll be building","level":"1.2.3","depth":2,"path":"Day_1/wireframes.md","ref":"./Day_1/wireframes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/project_setup.md","mtime":"2017-07-18T13:28:13.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T13:37:08.245Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

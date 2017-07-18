@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="css1.html" />
+    
     
     <link rel="prev" href="project_setup.html" />
     
@@ -140,12 +142,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="project_setup.html">
+        <li class="chapter " data-level="1.2.3" data-path="wireframes.html">
             
-                <a href="project_setup.html">
+                <a href="wireframes.html">
             
                     
-                    Project Creation : Terminal and Git
+                    What we'll be building
             
                 </a>
             
@@ -153,12 +155,38 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="html1.html">
+        <li class="chapter " data-level="1.2.4" data-path="project_setup.html">
+            
+                <a href="project_setup.html">
+            
+                    
+                    Project Creation : Terminal, Git & npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="html1.html">
             
                 <a href="html1.html">
             
                     
                     Building foundations : HTML & CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="css1.html">
+            
+                <a href="css1.html">
+            
+                    
+                    Getting Stylish with CSS
             
                 </a>
             
@@ -185,20 +213,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../Day_2/css1.html">
-            
-                <a href="../Day_2/css1.html">
-            
-                    
-                    Getting Stylish with CSS
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.2" data-path="../Day_2/responsive.html">
+        <li class="chapter " data-level="1.3.1" data-path="../Day_2/responsive.html">
             
                 <a href="../Day_2/responsive.html">
             
@@ -211,7 +226,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="../Day_2/bootstrap.html">
+        <li class="chapter " data-level="1.3.2" data-path="../Day_2/bootstrap.html">
             
                 <a href="../Day_2/bootstrap.html">
             
@@ -372,7 +387,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../Day_5/deploy.html">
+        <li class="chapter " data-level="1.6.1" data-path="../Day_5/partials.html">
+            
+                <a href="../Day_5/partials.html">
+            
+                    
+                    Making a partial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Day_5/deploy.html">
             
                 <a href="../Day_5/deploy.html">
             
@@ -385,7 +413,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" >
+        <li class="chapter " data-level="1.6.3" >
             
                 <span>
             
@@ -506,7 +534,7 @@
 <li><a href="#two">Hello, world!</a></li>
 <li><a href="#three">Using comments</a></li>
 <li><a href="#four">Fleshing out our page</a></li>
-<li><a href="#five">Keeping things DRY with partials</a></li>
+<li><a href="#five">Linking stylesheets in HTML pages</a></li>
 </ul>
 <hr>
 <h1 id="lets-get-coding">Let&apos;s get coding</h1>
@@ -528,7 +556,7 @@
 <p>Let&apos;s go through these one-by-one.</p>
 <ul>
 <li><code>&lt;!DOCTYPE html&gt;</code> tells the browser what type of code to expect.</li>
-<li>The <code>&lt;html&gt;&lt;/html&gt;</code> tags enclose all of the HTML on our page, and tell the browser where to start and stop reading the code.</li>
+<li>The <code>&lt;html&gt;&lt;/html&gt;</code> tags enclose all of the HTML on our page and tell the browser where to start and stop reading the code.</li>
 <li>The <code>&lt;head&gt;</code> tags contain all of the HTML code which doesn&apos;t make up the body of the web page. Commonly found within the head tags are things like stylesheet links and &apos;metadata&apos;, such as the title of the page which shows up n the browser tab.</li>
 <li>The<code>&lt;body&gt;</code> tags contain the meat of the page; here&apos;s where we&apos;ll declare all of the components making up the visual structure of the page.</li>
 </ul>
@@ -550,7 +578,7 @@
 <p>This at least makes the image fully visible, but it&apos;s not a great solution; ideally, we want the image to take up the whole screen. The trouble is, we don&apos;t know how big the user&apos;s screen is. For this, we&apos;ll need some CSS. We don&apos;t have any stylesheets made just yet, so we&apos;ll use some <code>inline CSS</code>:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./img/lake.jpeg&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;max-width:100%;&quot;</span>&gt;</span>
 </code></pre>
-<p>Inline CSS is when you attach the CSS styling directly to the tag of the HTML element it affects. Shortly we&apos;ll make some style sheets and move all of our styling into there, but for now this is a temporary solution to our image sizing problem.</p>
+<p>Inline CSS is when you attach the CSS styling directly to the tag of the HTML element it affects. Shortly we&apos;ll make some style sheets and move all of our stylings into there, but for now, this is a temporary solution to our image sizing problem.</p>
 <h1 id="4-using-comments"><span id="three">4. Using comments</span></h1>
 <p>Comments are a great way to kind of &apos;signpost&apos; your code. Think of them as sticky notes you might put on a book. When you &apos;comment out&apos; some code, it won&apos;t affect the resulting browser code at all. So you can use code either to make code &apos;latent&apos;, or for your own notation purposes.</p>
 <p>To remind ourselves to remove the inline CSS when we made our stylesheets, let&apos;s make a comment about our <code>img</code> tag now.</p>
@@ -586,15 +614,89 @@
 <p>If you&apos;re using Sublime Text and you want a bit more text, highlight the lines you want to duplicate (the <code>&lt;p&gt;</code> tags and the text within) and press <code>CMD + Shift + D</code>.</p>
 </blockquote>
 <p><img src="../img/day_1/div-text.png" alt=""></p>
-<h3 id="making-a-header-and-footer">Making a header and footer</h3>
+<h3 id="making-a-header">Making a header</h3>
+<p>Every page needs a convenient form of navigation so that the user can get around the site, and typically a header is a good way to provide this. Our header will sit at the top of the page, and contain all the most vital links the user will need.</p>
+<p>Code:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+</code></pre>
+<p>The <code>&lt;header&gt;</code> tag is an example of <em>semantic HTML</em>. It&apos;s a descriptive divider for the elements in our page. Other example of semantic HTML elements include <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code> and <code>&lt;section</code>.</p>
+<p>Inside our header section, we have the <code>ul</code> and <code>li</code> tags, which stand for &apos;unordered list&apos; and &apos;list item&apos; respectively.</p>
+<p>Right now, our header items aren&apos;t pointing anywhere. Let&apos;s fix that now. </p>
 <h3 id="making-and-linking-to-additional-pages">Making and linking to additional pages</h3>
-<h1 id="6-keeping-things-dry-with-partials"><span id="five">6. Keeping things DRY with partials</span></h1>
-<p>Typically a header will be displayed constantly across all pages on a single site. Trouble is, if we want that to be the case here, we&apos;ll have to copy and paste the header code into all pages of our site. Not only is that kind of a pain, it&apos;s also bad coding practice.</p>
-<p><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">The &apos;DRY&apos; Principle</a> states that we should do something to reduce unnecessary code repetition. Ideally what we&apos;d like to do here is write the code for the header once and have it generate on every page. We&apos;re going to do that with something known as a <code>template engine</code>. We&apos;ll be using Handlebars.js.</p>
-<p><img src="../img/day_1/handlebars.png" alt="Handlebars"></p>
+<p>In the <code>Terminal</code>, while in the root directory of our project, type:</p>
+<pre><code>touch about.html
+</code></pre><p>to create our about page. For now, we&apos;ll just put some filler text in <code>about</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is the about page.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+</code></pre>
+<p>Now that we&apos;ve got two pages, we can link between them in the header. Return to <code>index.html</code>, and add <code>&lt;a&gt;</code> tags to the <code>list items</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+</code></pre>
+<p>You may have noticed that I&apos;ve moved the <code>&lt;a&gt;</code> tags onto a new line between the <code>&lt;li&gt;</code> tags, and the <code>&lt;li&gt;</code> tags are indented within the <code>&lt;ul&gt;</code> tags. Indentation is a vital part of writing <strong>readable code</strong>, and is considered best practice in coding. Breaking nested tags onto their own lines also helps to keep things tidy.</p>
+<h2 id="making-a-stylesheet">Making a stylesheet</h2>
+<p>Speaking of lines, let&apos;s get our header links on a single horizontal line so that it looks nicer and takes up less vertical space. For that, we&apos;ll need to make our first CSS stylesheet:</p>
+<p><code>Terminal</code>:</p>
+<pre><code>mkdir css
+touch css/style.css
+</code></pre><p><strong><code>style.css</code></strong>:</p>
+<pre><code class="lang-css"><span class="hljs-selector-tag">header</span> <span class="hljs-selector-tag">ul</span> <span class="hljs-selector-tag">li</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">list-decoration</span>: none;
+}
+</code></pre>
+<p>The above CSS commands the browser to look for any <code>li</code> tags within the <code>ul</code> tags, which in turn are within the <code>header</code> tag, and apply the styling within. The property-value pairs here will line the <code>li</code> elements up horizontally, and remove their bullet points.</p>
+<p>Here&apos;s the syntax for writing CSS rules:</p>
+<p><img src="../img/day_1/css-syntax.jpg" alt="How to write CSS"></p>
+<p>Your project file structure should now look like this:</p>
+<p><img src="../img/day_1/file-structure.png" alt="File structure"></p>
+<h1 id="linking-stylesheets-in-html-pages"><span id="five">Linking stylesheets in HTML pages</span></h1>
+<p>In order for our new CSS to apply to our HTML, we&apos;ll need to make a <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> of our <code>index.html</code> page.</p>
+<p><code>index.html</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./css/style.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+</code></pre>
+<p>Refresh your page in Chrome, and you should see the style apply to your header.</p>
+<p>All that&apos;s left to do now is to show the <code>anchor (&lt;a&gt;)</code> tags where to point:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./index.html&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./about.html&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+</code></pre>
+<p>If you head back to your page in Chrome, you&apos;ll now see that the header list items are links, and you can now move between your pages.</p>
+<p>We won&apos;t be doing anything with the about page until we&apos;re doing styling <code>index</code>, so here we can just put a link back to the homepage:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./index.html&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+</code></pre>
 <blockquote>
-<p><a href="http://handlebarsjs.com/installation.html" target="_blank">Download Handlebars here</a></p>
+<p><strong>NOTE</strong> <br>
+We&apos;ve made some pretty significant changes to our project, so now would be a good time to commit them.</p>
+<ol>
+<li>Type <code>gst</code> to see our changes.</li>
+<li><code>git add .</code> to add all of our changes to staging.</li>
+<li><code>git commit -m &quot;Made header element&quot;</code> to write the commit message and make the commit.</li>
+<li><code>git push</code> to push our update to GitHub.</li>
+</ol>
 </blockquote>
+<p>Now let&apos;s move on to continuing to build out our HTML, and styling it up.</p>
 
                                 
                                 </section>
@@ -622,10 +724,14 @@
 
             
                 
-                <a href="project_setup.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Project Creation : Terminal and Git">
+                <a href="project_setup.html" class="navigation navigation-prev " aria-label="Previous page: Project Creation : Terminal, Git & npm">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="css1.html" class="navigation navigation-next " aria-label="Next page: Getting Stylish with CSS">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -634,7 +740,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Building foundations : HTML & CSS","level":"1.2.4","depth":2,"next":{"title":"Day 2","level":"1.3","depth":1,"ref":"","articles":[{"title":"Getting Stylish with CSS","level":"1.3.1","depth":2,"path":"Day_2/css1.md","ref":"Day_2/css1.md","articles":[]},{"title":"Responsive Design","level":"1.3.2","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]},{"title":"CSS Framework : Bootstrap","level":"1.3.3","depth":2,"path":"Day_2/bootstrap.md","ref":"./Day_2/bootstrap.md","articles":[]}]},"previous":{"title":"Project Creation : Terminal and Git","level":"1.2.3","depth":2,"path":"Day_1/project_setup.md","ref":"./Day_1/project_setup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/html1.md","mtime":"2017-07-16T10:58:59.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-16T11:23:03.394Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Building foundations : HTML & CSS","level":"1.2.5","depth":2,"next":{"title":"Getting Stylish with CSS","level":"1.2.6","depth":2,"path":"Day_1/css1.md","ref":"Day_1/css1.md","articles":[]},"previous":{"title":"Project Creation : Terminal, Git & npm","level":"1.2.4","depth":2,"path":"Day_1/project_setup.md","ref":"./Day_1/project_setup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/html1.md","mtime":"2017-07-18T13:30:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T13:37:08.245Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

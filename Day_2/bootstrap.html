@@ -140,12 +140,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../Day_1/project_setup.html">
+        <li class="chapter " data-level="1.2.3" data-path="../Day_1/wireframes.html">
             
-                <a href="../Day_1/project_setup.html">
+                <a href="../Day_1/wireframes.html">
             
                     
-                    Project Creation : Terminal and Git
+                    What we'll be building
             
                 </a>
             
@@ -153,12 +153,38 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="../Day_1/html1.html">
+        <li class="chapter " data-level="1.2.4" data-path="../Day_1/project_setup.html">
+            
+                <a href="../Day_1/project_setup.html">
+            
+                    
+                    Project Creation : Terminal, Git & npm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Day_1/html1.html">
             
                 <a href="../Day_1/html1.html">
             
                     
                     Building foundations : HTML & CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Day_1/css1.html">
+            
+                <a href="../Day_1/css1.html">
+            
+                    
+                    Getting Stylish with CSS
             
                 </a>
             
@@ -185,20 +211,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="css1.html">
-            
-                <a href="css1.html">
-            
-                    
-                    Getting Stylish with CSS
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.2" data-path="responsive.html">
+        <li class="chapter " data-level="1.3.1" data-path="responsive.html">
             
                 <a href="responsive.html">
             
@@ -211,7 +224,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.3" data-path="bootstrap.html">
+        <li class="chapter active" data-level="1.3.2" data-path="bootstrap.html">
             
                 <a href="bootstrap.html">
             
@@ -372,7 +385,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../Day_5/deploy.html">
+        <li class="chapter " data-level="1.6.1" data-path="../Day_5/partials.html">
+            
+                <a href="../Day_5/partials.html">
+            
+                    
+                    Making a partial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Day_5/deploy.html">
             
                 <a href="../Day_5/deploy.html">
             
@@ -385,7 +411,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" >
+        <li class="chapter " data-level="1.6.3" >
             
                 <span>
             
@@ -503,11 +529,58 @@
                                 <h1 id="contents">Contents</h1>
 <ul>
 <li><a href="#one">What is Bootstrap?</a></li>
+<li><a href="#two">Installing Bootstrap</a></li>
 <li><a href="#two">Working with the Bootstrap Grid</a></li>
 <li><a href="#two">Helpful classes</a></li>
 <li><a href="#two">Using components</a></li>
 </ul>
 <hr>
+<h1 id="what-is-bootstrap"><span id="one">What is Bootstrap?</span></h1>
+<p>Bootstrap is a HTML, CSS and JavaScript framework which offers a huge list of design methods and components for making the front end of your app. It allows for the easy creation of a fully responsive and attractive site.</p>
+<h1 id="installing-bootstrap"><span id="two">Installing Bootstrap</span></h1>
+<p>We need to use <code>npm</code> to install Bootstrap.</p>
+<p><code>Terminal</code>:</p>
+<pre><code>npm install --save bootstrap@4.0.0-alpha.6
+</code></pre><p>As usual, we need to link to bootstrap to apply it to our site.</p>
+<p><code>index.html</code>:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./node_modules/bootstrap/dist/css/bootstrap.min.css&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;./css/style.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+</code></pre>
+<p>You may notice that the link to <code>normalize</code> is gone. This is because Bootstrap has it&apos;s own CSS reset built-in. So we can remove <code>normalize</code> now, and delete the file in the terminal:</p>
+<p><code>Terminal</code>:</p>
+<pre><code>rm -rf css/normalize.css
+</code></pre><h1 id="working-with-the-bootstrap-grid">Working with the Bootstrap Grid</h1>
+<p>We can add our first Bootstrap class to our text div like so:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque amet provident eligendi ut id, ratione quasi tenetur ipsum repellendus aperiam voluptatum eaque reiciendis, eos quae tempora temporibus magni hic?
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>      
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque amet provident eligendi ut id, ratione quasi tenetur ipsum repellendus aperiam voluptatum eaque reiciendis, eos quae tempora temporibus magni hic?
+  <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>The <code>.container</code> class centers the content horizontally, in a fixed-width box. It also prepares the content for the use of the Bootstrap grid system. Change your code as follows:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-md-6&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque amet provident eligendi ut id, ratione quasi tenetur ipsum repellendus aperiam voluptatum eaque reiciendis, eos quae tempora temporibus magni hic?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>  
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>    
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-md-6&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque cumque amet provident eligendi ut id, ratione quasi tenetur ipsum repellendus aperiam voluptatum eaque reiciendis, eos quae tempora temporibus magni hic?
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>Your text should now be in two columns like so:</p>
+<p>[[IMAGE]]</p>
 
                                 
                                 </section>
@@ -547,7 +620,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CSS Framework : Bootstrap","level":"1.3.3","depth":2,"next":{"title":"Day 3","level":"1.4","depth":1,"ref":"","articles":[{"title":"New CSS features : Flexbox and Grid","level":"1.4.1","depth":2,"ref":"","articles":[]},{"title":"All about Accessibility","level":"1.4.2","depth":2,"ref":"","articles":[]},{"title":"Animation : Add Some Va Va Voom","level":"1.4.3","depth":2,"ref":"","articles":[]}]},"previous":{"title":"Responsive Design","level":"1.3.2","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_2/bootstrap.md","mtime":"2017-07-16T10:40:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-16T11:23:03.394Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CSS Framework : Bootstrap","level":"1.3.2","depth":2,"next":{"title":"Day 3","level":"1.4","depth":1,"ref":"","articles":[{"title":"New CSS features : Flexbox and Grid","level":"1.4.1","depth":2,"ref":"","articles":[]},{"title":"All about Accessibility","level":"1.4.2","depth":2,"ref":"","articles":[]},{"title":"Animation : Add Some Va Va Voom","level":"1.4.3","depth":2,"ref":"","articles":[]}]},"previous":{"title":"Responsive Design","level":"1.3.1","depth":2,"path":"Day_2/responsive.md","ref":"./Day_2/responsive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_2/bootstrap.md","mtime":"2017-07-17T18:52:54.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-18T13:37:08.245Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
