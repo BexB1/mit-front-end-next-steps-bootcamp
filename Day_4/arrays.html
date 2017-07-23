@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Getting Set Up · GitBook</title>
+        <title>All About Arrays · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="front_end.html" />
+    <link rel="next" href="functions.html" />
     
+    
+    <link rel="prev" href="data_types.html" />
     
 
     </head>
@@ -114,9 +116,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="getting_set_up.html">
+        <li class="chapter " data-level="1.2.1" data-path="../Day_1/getting_set_up.html">
             
-                <a href="getting_set_up.html">
+                <a href="../Day_1/getting_set_up.html">
             
                     
                     Getting Set Up
@@ -127,9 +129,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="front_end.html">
+        <li class="chapter " data-level="1.2.2" data-path="../Day_1/front_end.html">
             
-                <a href="front_end.html">
+                <a href="../Day_1/front_end.html">
             
                     
                     What is the Front End?
@@ -140,9 +142,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="wireframes.html">
+        <li class="chapter " data-level="1.2.3" data-path="../Day_1/wireframes.html">
             
-                <a href="wireframes.html">
+                <a href="../Day_1/wireframes.html">
             
                     
                     What we'll be building
@@ -153,9 +155,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="project_setup.html">
+        <li class="chapter " data-level="1.2.4" data-path="../Day_1/project_setup.html">
             
-                <a href="project_setup.html">
+                <a href="../Day_1/project_setup.html">
             
                     
                     Project Creation : Terminal, Git & npm
@@ -166,9 +168,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="html1.html">
+        <li class="chapter " data-level="1.2.5" data-path="../Day_1/html1.html">
             
-                <a href="html1.html">
+                <a href="../Day_1/html1.html">
             
                     
                     Building foundations : HTML & CSS
@@ -179,9 +181,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="css1.html">
+        <li class="chapter " data-level="1.2.6" data-path="../Day_1/css1.html">
             
-                <a href="css1.html">
+                <a href="../Day_1/css1.html">
             
                     
                     Getting Stylish with CSS
@@ -327,9 +329,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../Day_4/intro_to_js.html">
+        <li class="chapter " data-level="1.5.1" data-path="intro_to_js.html">
             
-                <a href="../Day_4/intro_to_js.html">
+                <a href="intro_to_js.html">
             
                     
                     Intro to JavaScript
@@ -340,9 +342,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../Day_4/data_types.html">
+        <li class="chapter " data-level="1.5.2" data-path="data_types.html">
             
-                <a href="../Day_4/data_types.html">
+                <a href="data_types.html">
             
                     
                     Diving into data types
@@ -353,9 +355,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../Day_4/arrays.html">
+        <li class="chapter active" data-level="1.5.3" data-path="arrays.html">
             
-                <a href="../Day_4/arrays.html">
+                <a href="arrays.html">
             
                     
                     All About Arrays
@@ -366,9 +368,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="../Day_4/functions.html">
+        <li class="chapter " data-level="1.5.4" data-path="functions.html">
             
-                <a href="../Day_4/functions.html">
+                <a href="functions.html">
             
                     
                     Fun with functions
@@ -537,7 +539,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Getting Set Up</a>
+        <a href=".." >All About Arrays</a>
     </h1>
 </div>
 
@@ -552,50 +554,75 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="getting-set-up">Getting Set Up</h1>
-<h3 id="join-the-slack-channel">Join the Slack channel</h3>
-<p>We have our own Slack channel for the Bootcamp, where we can chat about code, our projects, and work through problems together. If you have any questions or confusions during the week, use the channel to chat about it with your fellow students. Your mentors will also be on the channel to help out.</p>
+                                <h1 id="arrays">Arrays</h1>
+<p>If you want to store a <strong>bunch of things</strong>, a <strong>collection</strong> or a <strong>list</strong> of things in variables,  identifiers like <code>name1</code>, <code>name2</code>, <code>name3</code> and so on quickly become tiresome. <strong>Arrays</strong> are to the rescue!</p>
+<p>Imagine an array like a list or a collection of variables, but instead of each variable having its own name, only the array has a name. So how do you access a variable inside, then? How do you read and write? Using an <em>index</em>!</p>
+<p>An index is just a whole number, such as <code>0</code>, <code>1</code>, <code>2</code> and so forth. As in many areas of computing, indices in JavaScript arrays start with <code>0</code> --- so <code>0</code> is the index of the first element of an Array, <code>1</code> is the index of the second element, and so forth.</p>
+<p>The syntax is to list the values separated by commas, inside square brackets:</p>
+<pre><code class="lang-js">[value1, value2, value3]
+</code></pre>
+<p>You can store any type of value inside an array: strings, numbers, booleans. You can even store other arrays, or objects (which you will learn about next).</p>
+<h2 id="try-it-out">Try it out</h2>
+<p>Defining an array as a variable looks something like this:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> animals = [<span class="hljs-string">&quot;tiger&quot;</span>, <span class="hljs-string">&quot;puppy&quot;</span>, <span class="hljs-string">&quot;snake&quot;</span>, <span class="hljs-string">&quot;llama&quot;</span>];
+</code></pre>
+<p>Pretty neat! Now you have all the animals grouped together rather than having to define them separately. You can see how many animals there are by using <code>.length</code>:</p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(animals.length);
+</code></pre>
+<p>If you want to refer to one specific member of the array, you can do so by using their &quot;index number&quot; like so.</p>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(animals[<span class="hljs-number">1</span>]);
+</code></pre>
 <blockquote>
-<p><a href="">Join the Slack channel</a></p>
+<p>Take a guess at which animal that will print out, and see if you&apos;re right.</p>
 </blockquote>
-<h1 id="1-terminal">1. Terminal</h1>
-<p>If you&apos;re on a Mac, you&apos;ll already have a program called <code>Terminal</code> installed. Press <code>CMD + Space</code> and type &apos;terminal&apos; in the bar to find it. Alternatively you can find it in you Applications folder. Once you&apos;ve found it, drag it onto your dock so it&apos;s at hand. Those using Linux systems will also already have the Terminal program.</p>
-<p>Windows users will get a terminal alongside their Git download. When you need to open <code>Terminal</code> during the Bootcamp, you&apos;ll need to open <code>Git Bash</code>. Drag the program <code>Bash</code> onto your toolbar, or make a shortcut on your Desktop.</p>
-<h1 id="2-install-git">2. Install Git</h1>
+<p>Spoiler alert, it will print out &quot;puppy&quot;. That might seem weird, until you learn that JavaScript is a &quot;0-index&quot; language. What that means is that counting in JavaScript starts at 0. So <code>animals[0]</code>will print out &quot;tiger&quot;. We don&apos;t make the rules...</p>
 <blockquote>
-<p><a href="https://git-scm.com/download/" target="_blank">https://git-scm.com/download/</a></p>
+<p><strong>Exercise:</strong></p>
+<ol>
+<li>Create an array that contains the first names of all the students in the class.</li>
+<li><code>console.log</code> the number of names in the Array</li>
+<li>Now, <code>console.log()</code> each country in the list. Hint: <strong>For loops</strong></li>
+</ol>
+<p><strong>Don&apos;t ask a mentor - Google it!</strong> Try googling to find the answer if you&apos;re stuck. Google skills are an essential part of being a developer.</p>
 </blockquote>
-<p>Git is an open-source versional control system. It makes working on projects, both solo but especially as part of a group, much more efficient. Head to the link above and install the right version of Git for your operating system.</p>
-<h1 id="3-make-a-github-account">3. Make a GitHub account</h1>
-<p>Next, we need to make an account of GitHub so that the code we write can be stored on the internet.</p>
+<h1 id="useful-array-methods">Useful array methods</h1>
+<h4 id="concatenating-two-arrays">Concatenating two arrays</h4>
+<p>You&apos;ve learned how you can add two numbers and append two strings, but how does this work for arrays? A simple <code>arr1 + arr2</code> will not do, but there is a method you can use: <code>concat()</code>. It is a method that you call on the array (similar to how <code>console.log</code> is the <code>log</code> function called on <code>console</code>) and takes the array you want to append as a parameter.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> countries = [<span class="hljs-string">&apos;Scotland&apos;</span>, <span class="hljs-string">&apos;Germany&apos;</span>, <span class="hljs-string">&apos;Syria&apos;</span>];
+<span class="hljs-keyword">var</span> moreCountries = [<span class="hljs-string">&apos;Sudan&apos;</span>, <span class="hljs-string">&apos;Ethiopia&apos;</span>, <span class="hljs-string">&apos;France&apos;</span>];
+
+countries.concat(moreCountries);
+</code></pre>
+<h4 id="appending-an-element">Appending an element</h4>
+<p>If you want to append an element to an array, you can just put it after the last existing element like so:</p>
+<pre><code class="lang-js">countries[countries.length] = <span class="hljs-string">&apos;United States of America&apos;</span>;
+</code></pre>
+<p>There is another way though, which is a bit more elegant: the <code>push</code> function.</p>
+<pre><code class="lang-js">countries.push(<span class="hljs-string">&apos;United States of America&apos;</span>);
+
+<span class="hljs-comment">// .push can also be called with multiple parameters</span>
+countries.push(<span class="hljs-string">&apos;United States of America&apos;</span>, <span class="hljs-string">&apos;France&apos;</span>);
+</code></pre>
 <blockquote>
-<p><a href="https://github.com/" target="_blank">Sign up for GitHub</a></p>
+<p><strong>Exercise</strong>: Google <code>.slice</code>, <code>.splice</code>, <code>.push</code> and <code>.pop</code>.</p>
+<ol>
+<li>Use <code>.push</code> to add another country to your country array.</li>
+<li>Use <code>.pop</code> to remove the last two countries.</li>
+<li>Using <code>.push</code>, add enough countries to your array so that <code>countries.length</code> is 10. Now use <code>.slice</code> to return the first 3 countries from the array.</li>
+<li>Use <code>.splice</code> to remove the two countries at index positions 5 and 6.</li>
+<li>Use <code>.splice</code> to add a new country at index position 2.</li>
+</ol>
+<p><strong>Exercise (advanced)</strong></p>
+<ol>
+<li>Google the <code>.map</code> and <code>.filter</code> methods.</li>
+<li>Create an array of numbers. Use the <code>.map</code> method to triple every number in the array.</li>
+<li>Create an array of words. Use <code>.filter</code> to remove every word which is less than 4 letters long.</li>
+</ol>
 </blockquote>
-<h1 id="4-install-an-ide">4. Install an IDE</h1>
-<p>&apos;IDE&apos; stands for &apos;Integrated Development Environment&apos;. An IDE is basically a program designed specifically for developers to use in the writing of code. For this bootcamp, we&apos;ll be using Sublime Text 3. Sublime is a very widely-use IDE with excellent community support. If you&apos;ve used Microsoft Word before, you shouldn&apos;t find it difficult to use. But as we go along, you&apos;ll see that Sublime offers a lot of useful features for coders.</p>
-<p><strong>Note:</strong> If you have a preferred IDE that you&apos;re comfortable which isn&apos;t Sublime Text (eg, Atom), then please feel free to use that instead.</p>
-<blockquote>
-<p><a href="https://www.sublimetext.com/3" target="_blank">Install Sublime Text 3</a></p>
-</blockquote>
-<h3 id="some-extra-packages-for-sublime">Some extra packages for Sublime</h3>
-<p>There are a few extra bits we can install to make our time using Sublime Text a bit easier. With Sublime open, press <code>CMD + Shift + P</code> (<code>CTRL + Shift + P</code> on PC). Select &apos;Package control : Install Package&apos; and enter &apos;SideBarEnhancements&apos;. Select it to install. This will allow us to open our files in Chrome directly from Sublime.</p>
-<h1 id="5-install-google-chrome">5. Install Google Chrome</h1>
-<p>Your experience with web development will differ according to which browser you&apos;re working with. We&apos;ll be working with Google Chrome this week, because Chrome has a fantastic range of developer-specific tools which we&apos;ll be working with a lot.</p>
-<blockquote>
-<p><a href="https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&amp;hl=en" target="_blank">Install Google Chrome</a></p>
-</blockquote>
-<h1 id="6-install-nodejs">6. Install Node.js</h1>
-<p>It&apos;s simplest to say that Node is JavaScript on the back end, but it&apos;s a bit more complex than that. We&apos;re installing Node here for acces to <code>npm</code>, Node Package Manager. <code>npm</code> will allow us to easily install convenient pre-written code packages that will make our app more dynamic.</p>
-<blockquote>
-<p><a href="https://nodejs.org/en/" target="_blank">Install Node here</a></p>
-</blockquote>
-<h1 id="7-install-ruby">7. Install Ruby</h1>
-<p><strong>Note: If you&apos;re on a Mac, you can skip this step.</strong></p>
-<p>Ruby is a back-end programming language. We won&apos;t be using it this week, but we need it in order to enable the use of Sass, which will allow us to work with more advanced CSS.</p>
-<p><a href="https://rubyinstaller.org/" target="_blank">Install Ruby here</a></p>
-<h1 id="8-install-sass">8. Install Sass</h1>
-<p>Sass is a <em>CSS precompiler</em>. It allows developers to write more complex CSS, which we&apos;ll be doing in the middle of the week.</p>
-<p><a href="http://sass-lang.com/install" target="_blank">Install Sass here</a></p>
+<h1 id="resources">Resources</h1>
+<ol>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Arrays</a></li>
+</ol>
 
                                 
                                 </section>
@@ -623,8 +650,12 @@
 
             
                 
+                <a href="data_types.html" class="navigation navigation-prev " aria-label="Previous page: Diving into data types">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="front_end.html" class="navigation navigation-next navigation-unique" aria-label="Next page: What is the Front End?">
+                
+                <a href="functions.html" class="navigation navigation-next " aria-label="Next page: Fun with functions">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -635,7 +666,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Getting Set Up","level":"1.2.1","depth":2,"next":{"title":"What is the Front End?","level":"1.2.2","depth":2,"path":"Day_1/front_end.md","ref":"./Day_1/front_end.md","articles":[]},"previous":{"title":"Day 1","level":"1.2","depth":1,"ref":"","articles":[{"title":"Getting Set Up","level":"1.2.1","depth":2,"path":"Day_1/getting_set_up.md","ref":"./Day_1/getting_set_up.md","articles":[]},{"title":"What is the Front End?","level":"1.2.2","depth":2,"path":"Day_1/front_end.md","ref":"./Day_1/front_end.md","articles":[]},{"title":"What we'll be building","level":"1.2.3","depth":2,"path":"Day_1/wireframes.md","ref":"./Day_1/wireframes.md","articles":[]},{"title":"Project Creation : Terminal, Git & npm","level":"1.2.4","depth":2,"path":"Day_1/project_setup.md","ref":"./Day_1/project_setup.md","articles":[]},{"title":"Building foundations : HTML & CSS","level":"1.2.5","depth":2,"path":"Day_1/html1.md","ref":"./Day_1/html1.md","articles":[]},{"title":"Getting Stylish with CSS","level":"1.2.6","depth":2,"path":"Day_1/css1.md","ref":"Day_1/css1.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_1/getting_set_up.md","mtime":"2017-07-17T19:09:57.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-23T18:01:49.995Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"All About Arrays","level":"1.5.3","depth":2,"next":{"title":"Fun with functions","level":"1.5.4","depth":2,"path":"Day_4/functions.md","ref":"./Day_4/functions.md","articles":[]},"previous":{"title":"Diving into data types","level":"1.5.2","depth":2,"path":"Day_4/data_types.md","ref":"./Day_4/data_types.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_4/arrays.md","mtime":"2017-07-23T16:56:33.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-23T18:01:49.995Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

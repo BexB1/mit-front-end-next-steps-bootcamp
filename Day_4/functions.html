@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>It's Time to Deploy! · GitBook</title>
+        <title>Fun with functions · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -58,7 +58,7 @@
 
     
     
-    <link rel="prev" href="partials.html" />
+    <link rel="prev" href="arrays.html" />
     
 
     </head>
@@ -327,9 +327,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../Day_4/intro_to_js.html">
+        <li class="chapter " data-level="1.5.1" data-path="intro_to_js.html">
             
-                <a href="../Day_4/intro_to_js.html">
+                <a href="intro_to_js.html">
             
                     
                     Intro to JavaScript
@@ -340,9 +340,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../Day_4/data_types.html">
+        <li class="chapter " data-level="1.5.2" data-path="data_types.html">
             
-                <a href="../Day_4/data_types.html">
+                <a href="data_types.html">
             
                     
                     Diving into data types
@@ -353,9 +353,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../Day_4/arrays.html">
+        <li class="chapter " data-level="1.5.3" data-path="arrays.html">
             
-                <a href="../Day_4/arrays.html">
+                <a href="arrays.html">
             
                     
                     All About Arrays
@@ -366,9 +366,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="../Day_4/functions.html">
+        <li class="chapter active" data-level="1.5.4" data-path="functions.html">
             
-                <a href="../Day_4/functions.html">
+                <a href="functions.html">
             
                     
                     Fun with functions
@@ -411,9 +411,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="partials.html">
+        <li class="chapter " data-level="1.6.1" data-path="../Day_5/partials.html">
             
-                <a href="partials.html">
+                <a href="../Day_5/partials.html">
             
                     
                     Making a partial
@@ -424,9 +424,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.2" data-path="deploy.html">
+        <li class="chapter " data-level="1.6.2" data-path="../Day_5/deploy.html">
             
-                <a href="deploy.html">
+                <a href="../Day_5/deploy.html">
             
                     
                     It's Time to Deploy!
@@ -537,7 +537,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >It's Time to Deploy!</a>
+        <a href=".." >Fun with functions</a>
     </h1>
 </div>
 
@@ -552,7 +552,118 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="its-time-to-deploy">It&apos;s Time to Deploy!</h1>
+                                <h1 id="functions">Functions</h1>
+<p>We&apos;ve been writing code that performs different actions, but sometimes you want to group code together to achieve a particular end. This is where functions come in.</p>
+<p>A function is a block of code designed to perform a particular task. A function is executed when it is &quot;invoked&quot;.</p>
+<p>The syntax of a function looks like this:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">functionName</span> (<span class="hljs-params">parameters</span>) </span>{
+  <span class="hljs-comment">// code to be executed</span>
+}
+</code></pre>
+<p>You can call a function whatever you want, just like a variable. You can also give a function different values every time you run it which are called &quot;parameters&quot;.</p>
+<p>To make the function run, we invoke it like so:</p>
+<pre><code class="lang-js">functionName();
+</code></pre>
+<h3 id="try-it-out">Try it out</h3>
+<p>Let&apos;s write a function that adds two numbers together. We&apos;ll call it <code>add</code>. We want to add together two different numbers every time, so let&apos;s define two parameters to represent this, <code>x</code> and <code>y</code>.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> (<span class="hljs-params">x, y</span>) </span>{
+  <span class="hljs-comment">// code to be executed</span>
+}
+
+add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+</code></pre>
+<p>Notice I&apos;ve invoked the function underneath, with the paremeters <code>2</code> and <code>3</code>. Inside the function, try to <code>console.log()</code> your parameters and see what happens.</p>
+<p>Now, we want to add these two numbers together, but it isn&apos;t enough just to write <code>x + y</code>, since we haven&apos;t told the function to return anything. It&apos;s time for a <code>return</code> statement. The <code>return</code> statement specifies the value to output.</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> (<span class="hljs-params">x, y</span>) </span>{
+  <span class="hljs-keyword">return</span> x + y;
+}
+
+add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>);
+</code></pre>
+<p>Run this code, and hopefully you get the right answer!</p>
+<blockquote>
+<p><strong>Exercise</strong></p>
+<p>Write a function called <code>multiply</code> that multiplies two numbers together. It should take two numbers as parameters and return the answer.</p>
+</blockquote>
+<h1 id="es6---fat-arrow-functions">ES6 - &apos;Fat arrow&apos; functions</h1>
+<p>ES6 introduced a new way of structuring functions; the arrow function. Let&apos;s compare it against the ES5 syntax:</p>
+<pre><code class="lang-js">
+  <span class="hljs-comment">// ES5</span>
+  <span class="hljs-keyword">var</span> multiply = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x * y;
+  };
+
+  <span class="hljs-comment">// ES6</span>
+  multiply = (x, y) =&gt; { <span class="hljs-keyword">return</span> x * y };
+
+  <span class="hljs-built_in">console</span>.log(multiply(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>));
+</code></pre>
+<p>Arrow functions are quicker to write because they don&apos;t require variable assignment. Also, if you&apos;re only passing one argument into the arrow function, you don&apos;t need to use brackets around the parameter:</p>
+<pre><code class="lang-js">  multiplyByTen = num =&gt; { <span class="hljs-keyword">return</span> <span class="hljs-number">10</span> * num };
+
+  <span class="hljs-built_in">console</span>.log(multiplyByTen(<span class="hljs-number">5</span>));
+</code></pre>
+<p>If you&apos;re only going to <code>return</code> a single line in an arrow function, you don&apos;t even need the curly brackets (or the <code>return</code> keyword):</p>
+<pre><code class="lang-js">  greet = name =&gt; <span class="hljs-string">`Hello, I am <span class="hljs-subst">${name}</span>!`</span>;
+
+  <span class="hljs-built_in">console</span>.log(greet(<span class="hljs-string">&apos;Ada Lovelace&apos;</span>));
+</code></pre>
+<p>However, there are some important differences between arrow functions and ES5 functions aside from syntax. Try the following exercise:</p>
+<pre><code class="lang-js">  <span class="hljs-keyword">const</span> ourClass = {
+    members: [<span class="hljs-string">&apos;Raymond&apos;</span>, <span class="hljs-string">&apos;Adis&apos;</span>, <span class="hljs-string">&apos;Flavia&apos;</span>, <span class="hljs-string">&apos;Nabil&apos;</span>, <span class="hljs-string">&apos;Kiya&apos;</span>],
+    className: <span class="hljs-string">&apos;London Class 2&apos;</span>,
+    classSummary: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.members.map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">member</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${member}</span> is in <span class="hljs-subst">${this.className}</span>`</span>;
+      });
+    }
+  };
+
+  <span class="hljs-built_in">console</span>.log(ourClass.classSummary());
+</code></pre>
+<p>The above code doesn&apos;t quite work. We&apos;ve got an object, the <code>ourClass</code> object, and within it, and array, a string and a method. But <code>this.className</code> is returning as <code>undefined</code> - the code isn&apos;t seeing what we&apos;re trying to point it to.</p>
+<p>Let&apos;s try with an arrow function:</p>
+<pre><code class="lang-js">  <span class="hljs-keyword">const</span> ourClass = {
+    members: [<span class="hljs-string">&apos;Raymond&apos;</span>, <span class="hljs-string">&apos;Adis&apos;</span>, <span class="hljs-string">&apos;Flavia&apos;</span>, <span class="hljs-string">&apos;Nabil&apos;</span>, <span class="hljs-string">&apos;Kia&apos;</span>],
+    className: <span class="hljs-string">&apos;London Class 2&apos;</span>,
+    classSummary: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.members.map((member) =&gt; {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${member}</span> is in <span class="hljs-subst">${this.className}</span>`</span>;
+      });
+    }
+  };
+
+  <span class="hljs-built_in">console</span>.log(ourClass.classSummary());
+</code></pre>
+<p>With that one little change, the function is now working. Why? Well, arrow functions differ to ES5 functions in that they make use of something called &apos;lexical <code>this</code>&apos;. JavaScript is a &apos;lexical&apos; programming language; this means that how the code behaves depends on the order or placement of each piece of code. When we use an arrow function, the value of <code>this</code> is bound to the surrounding context. So unlike when we used the anonymous function in the ES5 version(<code>this.members.map(function(member) {</code>), the arrow function lets the JavaScript engine know where <code>this</code> is pointing to.</p>
+<p>If this is confusing, don&apos;t worry; we&apos;re going to move onto <code>this</code> in greater depth shortly. But first, let&apos;s do a few exercises with arrow functions.</p>
+<blockquote>
+<p><strong>Exercise</strong>:</p>
+<p>Use <a href="https://jsbin.com/" target="_blank">JSBin</a> for today&apos;s exercises.</p>
+<ol>
+<li>Write an arrow function that returns the string, <code>Hello, I am ${name}, and I am ${age} years old.</code></li>
+<li>Write an arrow function that takes an array of integers, and returns the sum of the elements in the array. Google and use the built-in <code>reduce</code> array method for this.</li>
+<li><p>The syntax of this function is wonky. Can you fix it to use the shortest arrow function possible?</p>
+<pre><code class="lang-js"><span class="hljs-keyword">let</span> eye = <span class="hljs-string">&quot;eye&quot;</span>;
+
+<span class="hljs-keyword">const</span> fire =
+(
+
+) =
+&gt;
+{
+ <span class="hljs-keyword">return</span> <span class="hljs-string">`bulls-`</span>;
+}
+</code></pre>
+</li>
+<li>Refactor the following ES5 function to use an arrow function:<pre><code class="lang-js"><span class="hljs-keyword">const</span> fibonacci = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">n</span>) </span>{
+<span class="hljs-keyword">if</span> (n &lt; <span class="hljs-number">3</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+<span class="hljs-keyword">return</span> fibonacci(n - <span class="hljs-number">1</span>) + fibonacci(n - <span class="hljs-number">2</span>);
+}
+</code></pre>
+</li>
+</ol>
+</blockquote>
 
                                 
                                 </section>
@@ -580,7 +691,7 @@
 
             
                 
-                <a href="partials.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Making a partial">
+                <a href="arrays.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: All About Arrays">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -592,7 +703,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"It's Time to Deploy!","level":"1.6.2","depth":2,"next":{"title":"Where to go from here","level":"1.6.3","depth":2,"ref":"","articles":[]},"previous":{"title":"Making a partial","level":"1.6.1","depth":2,"path":"Day_5/partials.md","ref":"./Day_5/partials.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_5/deploy.md","mtime":"2017-07-06T16:23:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-23T18:01:49.995Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Fun with functions","level":"1.5.4","depth":2,"next":{"title":"Working with the DOM : Modals","level":"1.5.5","depth":2,"ref":"","articles":[]},"previous":{"title":"All About Arrays","level":"1.5.3","depth":2,"path":"Day_4/arrays.md","ref":"./Day_4/arrays.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_4/functions.md","mtime":"2017-07-23T16:50:47.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-23T18:01:49.995Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
