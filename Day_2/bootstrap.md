@@ -8,6 +8,8 @@
 
 ---
 
+![Bootstrap](../img/day_2/bootstrap.png)
+
 # <span id="one">What is Bootstrap?</span>
 
 Bootstrap is a HTML, CSS and JavaScript framework which offers a huge list of design methods and components for making the front end of your app. It allows for the easy creation of a fully responsive and attractive site.

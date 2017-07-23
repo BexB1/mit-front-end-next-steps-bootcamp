@@ -171,7 +171,7 @@ Then, at the very top of our `style.css` sheet, apply them like so:
 ```css
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+  font-size: 14px;
 }
 
 h1 {
@@ -203,7 +203,7 @@ Let's try adding a gradient to the background of our header:
 
 ```css
 header {
-  height: 2.5rem;
+  height: 35px;
   background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 }
 ```
