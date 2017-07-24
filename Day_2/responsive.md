@@ -55,24 +55,20 @@ This code says, "If the viewport width is 900px or over, make the background red
 
 > **Exercise**
 
-> [Open up repl.it](https://repl.it/) and in the dropdown box, select HTML, CSS and JS.
+> 1. [Open up repl.it](https://repl.it/) and in the dropdown box, select HTML, CSS and JS.
 
 > Put nothing in the HTML, but put media queries in the CSS panel that will change the background like so:
 
-> - Make it red at 900px width and above.
-> - Make it blue between 600px and 900px width.
-> - Make it yellow below 600px.
-
-# <span id="three">Making our header responsive</span>
-
-When we made our website's header yesterday, we used `display: inline` to make a single horizontal menu which looks great on a desktop. But now we have a problem; mobile screens don't have the width to display the menu links like this. If you try to view your site in a smaller screen using the Dev Tools, you'll see that it behaves oddly.
+>- Make it red at 900px width and above.
+>- Make it orange between 600px and 900px width.
+>- Keep going so that when you narrow the screen width, you cycle through the rainbow!
 
 # Useful links
 
-http://www.liquidapsive.com/
-http://caniuse.com/
-https://css-tricks.com/
-http://cssreference.io/
+- [Liquidapsive - see the different kinds of responsiveness](http://www.liquidapsive.com/)
+- [caniuse.com](http://caniuse.com/)
+- [css-tricks](https://css-tricks.com/)
+- [css reference](http://cssreference.io/)
 
 
 
