@@ -78,8 +78,10 @@ The `.container` class centers the content horizontally, in a fixed-width box. I
 </div>
 ```
 
-Your text should now be in two columns like so:
+Your text should now be in two columns!
 
-[[IMAGE]]
+The Bootstrap grid divides a containining `div` into 12 invisible columns of equal width. Using this system, we can specific how we want our elements to align.
+
+There's lots of extra Bootstrap helpers, all of which can be found in [Bootstrap's documentation](https://v4-alpha.getbootstrap.com/getting-started/introduction/)
 
 
