@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Making a partial · GitBook</title>
+        <title>Accessibility · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="deploy.html" />
+    <link rel="next" href="animation.html" />
     
     
 
@@ -256,9 +256,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../Day_3/access.html">
+        <li class="chapter active" data-level="1.4.1" data-path="access.html">
             
-                <a href="../Day_3/access.html">
+                <a href="access.html">
             
                     
                     Accessibility
@@ -269,9 +269,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../Day_3/animation.html">
+        <li class="chapter " data-level="1.4.2" data-path="animation.html">
             
-                <a href="../Day_3/animation.html">
+                <a href="animation.html">
             
                     
                     Animation : Add Some Va Va Voom
@@ -282,9 +282,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../Day_3/sass.html">
+        <li class="chapter " data-level="1.4.3" data-path="sass.html">
             
-                <a href="../Day_3/sass.html">
+                <a href="sass.html">
             
                     
                     Taking CSS further : Getting SASSy
@@ -398,9 +398,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="partials.html">
+        <li class="chapter " data-level="1.6.1" data-path="../Day_5/partials.html">
             
-                <a href="partials.html">
+                <a href="../Day_5/partials.html">
             
                     
                     Making a partial
@@ -411,9 +411,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="deploy.html">
+        <li class="chapter " data-level="1.6.2" data-path="../Day_5/deploy.html">
             
-                <a href="deploy.html">
+                <a href="../Day_5/deploy.html">
             
                     
                     It's Time to Deploy!
@@ -524,7 +524,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Making a partial</a>
+        <a href=".." >Accessibility</a>
     </h1>
 </div>
 
@@ -539,24 +539,50 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="6-keeping-things-dry-with-partials"><span id="five">6. Keeping things DRY with partials</span></h1>
-<p>Typically a header will be displayed constantly across all pages on a single site. Trouble is, if we want that to be the case here, we&apos;ll have to copy and paste the header code into all pages of our site. Not only is that kind of a pain, it&apos;s also bad coding practice.</p>
-<p><a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank">The &apos;DRY&apos; Principle</a> states that we should do something to reduce unnecessary code repetition. Ideally what we&apos;d like to do here is write the code for the header once and have it generate on every page. We&apos;re going to do that with something known as a <code>templating engine</code>. We&apos;ll be using Handlebars.js.</p>
-<p><img src="../img/day_1/handlebars.png" alt="Handlebars"></p>
-<p>In order to use Handlebars in our project, we&apos;re going to install it with <strong>npm</strong>.</p>
-<h1 id="installing-a-package-with-npm">Installing a package with npm</h1>
-<p>In <code>Terminal</code>:</p>
-<pre><code>npm install --save handlebars
-</code></pre><p>This command instructs <code>npm</code> to go to the internet and install Handlebars from among the thousands of available JavaScript packages that other developers have written and uploaded for others to use.</p>
-<p>The <code>--save</code> option instructs <code>npm</code> to save the Handlebars version in our <code>package.json</code> file. If you look there now, you&apos;ll see it:</p>
-<p><img src="../img/day_1/package-json.png" alt="Handlebars saved in package.json"></p>
-<p>This means that anyone else who clones your project and runs <code>npm install</code> in the Terminal, will get the exact version of Handlebars that you&apos;re using.</p>
-<h2 id="creating-a-header-partial">Creating a header partial</h2>
-<p>We&apos;re going to change our folder structure a bit now, because partials should be kept together in their own folder.</p>
-<p>In <code>Terminal</code>, and the project root:</p>
-<pre><code>mkdir partials
-touch partials/_header.html
-</code></pre><p>The naming convention for partials is to prefix them with an underscore.</p>
+                                <h1 id="considering-our-users-needs">Considering our User&apos;s needs</h1>
+<p>When designing and creating web pages, it&apos;s important that the web pages are accessible to all audiences. In particular, due to the visual and dynamic nature of the webpages that you&#x2019;ll be making, it&#x2019;s important to make sure that your website will also make sense to visually-impaired or blind users.</p>
+<p>Many visually-impaired or blind users access web pages with the help of screen readers. Screen readers parse through the HTML of your web page and read the contents out loud, responding to commands to navigate around the page, and take actions such as clicking on a link, typing in an input field, or submitting a form. In this resource, we&#x2019;ll give an overview of a few ways that you can improve the accessibility of your web page and help screen readers better interpret it!</p>
+<h1 id="color-on-your-site">Color on your site</h1>
+<p>Maintaining a high colour contrast is vital to making your site accessible. The Web Accessibility Guidelines suggest maintaining 4:5:1 as the minimum contrast ratio. For standard sized text the ideal ratio would be 7:1. Ideally, text needs to be in black and the background white.</p>
+<p>There are some great, useful tools to help Developers keep their sites accessible, such as <a href="http://colorsafe.co/" target="_blank">Colorsafe</a>.</p>
+<h1 id="alt-text">ALT text</h1>
+<p>One way to make the elements of your page more comprehensible to screen readers is to provide alt text for images. Alt, or alternative, text is provided as an attribute to the <code>&lt;img&gt;</code> tag to describe the image to the screen reader. For instance, when encountering the below...</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>My First Web Page!<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://en.wikipedia.org/wiki/File:Brown_bear.jpg&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;A brown bear&quot;</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>...the screen reader will be able to read aloud the description of the image (&quot;A brown bear&quot;) to the user, as opposed to simply informing the user that an image exists on the page. Be sure to provide succinct alt text descriptions for each image on your web page!</p>
+<h1 id="semantic-tags">Semantic tags</h1>
+<p>As we think about styling text on a webpage, you might have noticed some overlap between the following pairs of tags:</p>
+<p><code>&lt;b&gt;</code> vs. <code>&lt;strong&gt;</code>
+<code>&lt;i&gt;</code> vs. <code>&lt;em&gt;</code></p>
+<p>If you ever try swapping one of the tags in a pair for the other, you&#x2019;ll most likely see that there&#x2019;s little to no change in how the page looks. Both the <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code> tags bolden text, and the <code>&lt;i&gt;</code> and <code>&lt;em&gt;</code> italicize text. However, there&#x2019;s a fundamental difference between each of the tags in a pair when it comes to accessibility!</p>
+<p>The <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> elements simply denote how the text should look: text within these tags should appear as bold or italicized, respectively.</p>
+<p><code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code>, however, denote how text should be understood and, though they result in the same visual appearance, they affect how the screen reader interprets them: text within these tags are read out with a different voice to indicate the emphasis for each. These tags are known as semantic tags.</p>
+<p>So although <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> result in visually similar text as <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code>, they provide a way for screen readers to communicate the parts of text that are already highlighted visually to the user.</p>
+<h1 id="aria">ARIA</h1>
+<p>ARIA stands for &apos;Accessible Rich Internet Applications&apos;, and defines ways to make Web content and Web applications (especially those developed with Ajax and JavaScript) more accessible to people with disabilities. For example, ARIA enables accessible navigation landmarks, JavaScript widgets, form hints and error messages, live content updates, and more.</p>
+<p>ARIA attributes are designed to be interpreted automatically by the browser and translated to the operating system&apos;s native accessibility APIs. When ARIA is present, assistive technologies are able to recognize and interact with custom JavaScript controls in the same way that they do with desktop equivalents. This has the potential for providing a much more consistent user experience than was possible in the previous generation of web applications, since assistive technology users can apply all of their knowledge of how desktop applications work when they are using web-based applications.</p>
+<p>Compare:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;ch1Panel&quot;</span>&gt;</span>Chapter 1 content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;ch2Panel&quot;</span>&gt;</span>Chapter 2 content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;quizPanel&quot;</span>&gt;</span>Quiz content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<p>To:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;ch1Panel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;ch1Tab&quot;</span>&gt;</span>Chapter 1 content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;ch2Panel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;ch2Tab&quot;</span>&gt;</span>Chapter 2 content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;quizPanel&quot;</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;tabpanel&quot;</span> <span class="hljs-attr">aria-labelledby</span>=<span class="hljs-string">&quot;quizTab&quot;</span>&gt;</span>Quiz content goes here<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -585,7 +611,7 @@ touch partials/_header.html
             
                 
                 
-                <a href="deploy.html" class="navigation navigation-next navigation-unique" aria-label="Next page: It's Time to Deploy!">
+                <a href="animation.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Animation : Add Some Va Va Voom">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -596,7 +622,7 @@ touch partials/_header.html
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Making a partial","level":"1.6.1","depth":2,"next":{"title":"It's Time to Deploy!","level":"1.6.2","depth":2,"path":"Day_5/deploy.md","ref":"./Day_5/deploy.md","articles":[]},"previous":{"title":"Day 5","level":"1.6","depth":1,"ref":"","articles":[{"title":"Making a partial","level":"1.6.1","depth":2,"path":"Day_5/partials.md","ref":"./Day_5/partials.md","articles":[]},{"title":"It's Time to Deploy!","level":"1.6.2","depth":2,"path":"Day_5/deploy.md","ref":"./Day_5/deploy.md","articles":[]},{"title":"Where to go from here","level":"1.6.3","depth":2,"ref":"","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_5/partials.md","mtime":"2017-07-18T09:30:27.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-26T08:20:04.577Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Accessibility","level":"1.4.1","depth":2,"next":{"title":"Animation : Add Some Va Va Voom","level":"1.4.2","depth":2,"path":"Day_3/animation.md","ref":"./Day_3/animation.md","articles":[]},"previous":{"title":"Day 3","level":"1.4","depth":1,"ref":"","articles":[{"title":"Accessibility","level":"1.4.1","depth":2,"path":"Day_3/access.md","ref":"./Day_3/access.md","articles":[]},{"title":"Animation : Add Some Va Va Voom","level":"1.4.2","depth":2,"path":"Day_3/animation.md","ref":"./Day_3/animation.md","articles":[]},{"title":"Taking CSS further : Getting SASSy","level":"1.4.3","depth":2,"path":"Day_3/sass.md","ref":"./Day_3/sass.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Day_3/access.md","mtime":"2017-07-26T08:19:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-26T08:20:04.577Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
